@@ -1,21 +1,21 @@
-<script setup lang="ts">
-import { ref } from 'vue';
-</script>
-
 <template>
-  <div id="app">
-    <Target v-if="!isGameWon" @click="isGameWon ? null : increaseScore()" />
+  <div class="PointAndClick">
+    <Target v-if="!isGameWon" @click="startGame()" />
     <div v-if="isGameWon">
       <p>Vous avez gagné!</p>
     </div>
   </div>
+  <p>{{ score }}</p>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import { ref } from 'vue';
+
 let score = ref(0);
 let isGameWon = ref(false);
 
-function increaseScore() {
+function startGame() {
+
   score.value += 1;
 
   if (score.value === 10) {
@@ -27,13 +27,14 @@ function increaseScore() {
 }
 </script>
 
-<style scoped>
-#app {
+<style scoped lang="scss">
+.PointAndClick{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
   position: relative;
+  width: 500px;
+  height: 300px;
+  background: black;
 }
 </style>
