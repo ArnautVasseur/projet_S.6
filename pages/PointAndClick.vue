@@ -33,8 +33,8 @@ function startGame() {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 500px;
-  height: 300px;
+  width: 700px;
+  height: 500px;
   background: black;
 }
 </style>
