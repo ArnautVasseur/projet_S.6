@@ -200,7 +200,7 @@ onMounted(() => {
 <template>
   <div id="game" :class="gameEnded ? 'game-ended' : ''">
     <h1>Flood-it</h1>
-    <div class="moves">{{ player }} : {{ moves }} moves</div>
+    <div class="moves">{{ moves }} moves</div>
     <div class="grid">
       <div v-for="yi in size.y" :key="yi" class="row">
         <div v-for="xi in size.x" :id="'cell-' + xi + '' + yi" :key="xi" class="cell" @click="onCellClick">{{ xi }} / {{ yi }}</div>
@@ -228,33 +228,13 @@ onMounted(() => {
     <div class="footer">
       <div class="menu">
         <button class="btn" @click="restartGame">Restart</button>
-        <button class="btn" @click="useSeed">Use seed</button>
         <button class="btn" @click="newGame">New game</button>
       </div>
-      <p class="seed">Game seed : {{ seed }}</p>
     </div>
   </div>
 </template>
 
-<style>
-html * {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  background-color: darkslategrey;
-  color: snow;
-  font-family: monospace;
-  font-size: 16px;
-  margin: 0;
-  padding-top: 2vw;
-  text-align: center;
-}
+<style scoped>
 
 .menu {
   display: flex;
@@ -268,12 +248,6 @@ body {
   height: 100%;
 }
 
-h1 {
-  font-size: 30px;
-  letter-spacing: -4px;
-  margin: 2vw 0;
-}
-
 h3 {
   font-size: 20px;
 }
@@ -282,7 +256,7 @@ h3 {
   background: none;
   border: 1px solid;
   border-radius: 3px;
-  color: inherit;
+  color: blue;
   cursor: pointer;
   font-size: 20px;
   margin-bottom: 6px;
@@ -294,6 +268,9 @@ h3 {
 
 .btn:hover {
   opacity: 1;
+  background-color: blue;
+  color: white;
+  transition: ease-in-out 300ms;
 }
 
 .grid {
@@ -416,9 +393,5 @@ input {
 
 input[type="submit"] {
   cursor: pointer;
-}
-
-.seed {
-  word-break: break-word;
 }
 </style>

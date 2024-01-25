@@ -13,7 +13,7 @@
         <div class="SkillTree__Locations">
             <div class="SkillTree__Item__Dragon" @click="checkbox(Achievements[7])">
                 <p>{{ Achievements[7].Name }}</p>
-                <p>{{ Achievements[7].Name }}</p>
+                <p>{{ Achievements[7].checked }}</p>
             </div>
             <div class="SkillTree__Item__DeadZone" @click="checkbox(Achievements[9])">
                 <p>{{ Achievements[9].Name }}</p>
