@@ -14,5 +14,8 @@
     "sass": "^1.70.0",
     "vue": "^3.4.14",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
   }
 }

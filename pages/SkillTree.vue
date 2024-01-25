@@ -1,49 +1,49 @@
 <template>
     <div class="SkillTree">
         <div class="SkillTree__Start">
-            <div class="SkillTree__Item SkillTree__Start__Départ" @click="checkbox(Skills[0])">
+            <div class="SkillTree__Item__Départ" @click="checkbox(Skills[0])">
                 <p>{{ Skills[0].Name }}</p>
                 <p>{{ Skills[0].checked }}</p>
             </div>
-            <div class="SkillTree__Item SkillTree__Start__Bermudes" @click="checkbox(Skills[0].children[0])">
+            <div class="SkillTree__Item__Bermudes" @click="checkbox(Skills[0].children[0])">
                 <p>{{ Skills[0].children[0].Name }}</p>
                 <p>{{ Skills[0].children[0].checked }}</p>
             </div>
         </div>
         <div class="SkillTree__Locations">
-            <div class="SkillTree__Item SkillTree__Locations__Dragon" @click="checkbox(Skills[0].children[0].children[2])">
+            <div class="SkillTree__Item__Dragon" @click="checkbox(Skills[0].children[0].children[2])">
                 <p>{{ Skills[0].children[0].children[2].Name }}</p>
                 <p>{{ Skills[0].children[0].children[2].checked }}</p>
             </div>
-            <div class="SkillTree__Item SkillTree__Locations__DeadZone" @click="checkbox(Skills[0].children[0].children[3])">
+            <div class="SkillTree__Item__DeadZone" @click="checkbox(Skills[0].children[0].children[3])">
                 <p>{{ Skills[0].children[0].children[3].Name }}</p>
                 <p>{{ Skills[0].children[0].children[3].checked }}</p>
             </div>
-            <div class="SkillTree__Item SkillTree__Locations__MarianaTrench" @click="checkbox(Skills[0].children[0].children[2].children[0])">
+            <div class="SkillTree__Item__MarianaTrench" @click="checkbox(Skills[0].children[0].children[2].children[0])">
                 <p>{{ Skills[0].children[0].children[2].children[0].Name }}</p>
                 <p>{{ Skills[0].children[0].children[2].children[0].checked }}</p>
             </div>
         </div>
         <div class="SkillTree__Disappearances">
-            <div class="SkillTree__Item SkillTree__Disappearances__GhostLights" @click="checkbox(Skills[0].children[0].children[0])">
+            <div class="SkillTree__Item__GhostLights" @click="checkbox(Skills[0].children[0].children[0])">
                 <p>{{ Skills[0].children[0].children[0].Name }}</p>
                 <p>{{ Skills[0].children[0].children[0].checked }}</p>
             </div>
-            <div class="SkillTree__Item SkillTree__Disappearances__MaryCeleste" @click="checkbox(Skills[0].children[0].children[0].children[0])">
+            <div class="SkillTree__Item__MaryCeleste" @click="checkbox(Skills[0].children[0].children[0].children[0])">
                 <p>{{ Skills[0].children[0].children[0].children[0].Name }}</p>
                 <p>{{ Skills[0].children[0].children[0].children[0].checked }}</p>
             </div>
-            <div class="SkillTree__Item SkillTree__Disappearances__SubMarines" @click="checkbox(Skills[0].children[0].children[0].children[1])">
+            <div class="SkillTree__Item__SubMarines" @click="checkbox(Skills[0].children[0].children[0].children[1])">
                 <p>{{ Skills[0].children[0].children[0].children[1].Name }}</p>
                 <p>{{ Skills[0].children[0].children[0].children[1].checked }}</p>
             </div>
         </div>
         <div class="SkillTree__Creatures">
-            <div class="SkillTree__Item SkillTree__Creatures__Bloops" @click="checkbox(Skills[0].children[0].children[1])">
+            <div class="SkillTree__Item__Bloop" @click="checkbox(Skills[0].children[0].children[1])">
                 <p>{{ Skills[0].children[0].children[1].Name }}</p>
                 <p>{{ Skills[0].children[0].children[1].checked }}</p>
             </div>
-            <div class="SkillTree__Item SkillTree__Creatures__Cryptids" @click="checkbox(Skills[0].children[0].children[1].children[0])">
+            <div class="SkillTree__Item__Cryptids" @click="checkbox(Skills[0].children[0].children[1].children[0])">
                 <p>{{ Skills[0].children[0].children[1].children[0].Name }}</p>
                 <p>{{ Skills[0].children[0].children[1].children[0].checked }}</p>
             </div>
@@ -153,36 +153,125 @@ function checkbox(skill: { checked: { value: boolean } }) {
 </script>
 
 <style lang="scss">
+
 .SkillTree{
+    width: 1100px;
+    height: 900px;
+    padding: 20px;
+    border: 2px solid black;
+
     &__Item
         {
-            width: 100px;
-            height: 100px;
-            background-color: rgb(50, 50, 162);
-            color: white;
-            text-align: center;
-        }
+            &__Départ{
+                top: 100px;
+                left: 500px;
+                width: 100px;
+                height: 100px;
+                background-color: rgba(0, 0, 255, 0.5);
+                color: white;
+                text-align: center;
+                position: absolute;
+            }
 
-    &__Start
-        {
-            background-color: rgba(255, 0, 0, 0.3);
-        }
+            &__Bermudes{
+                top: 300px;
+                left: 500px;
+                width: 100px;
+                height: 100px;
+                background-color: rgba(0, 0, 255, 0.5);
+                color: white;
+                text-align: center;
+                position: absolute;
+            }
 
-    &__Locations
-        {
-            background-color: rgba(0, 0, 255, 0.3);
-        }
+            &__Dragon{
+                top: 500px;
+                left: 100px;
+                width: 100px;
+                height: 100px;
+                background-color: rgba(0, 0, 255, 0.5);
+                color: white;
+                text-align: center;
+                position: absolute;
+            }
 
-    &__Disappearances
-        {
-            background-color: rgba(0, 255, 0, 0.3);
-        }
+            &__DeadZone{
+                top: 500px;
+                left: 300px;
+                width: 100px;
+                height: 100px;
+                background-color: rgba(0, 0, 255, 0.5);
+                color: white;
+                text-align: center;
+                position: absolute;
+            }
 
-    &__Creatures
-        {
-            background-color: rgba(255, 0, 255, 0.3);
+            &__MarianaTrench{
+                top: 700px;
+                left: 200px;
+                width: 100px;
+                height: 100px;
+                background-color: rgba(0, 0, 255, 0.5);
+                color: white;
+                text-align: center;
+                position: absolute;
+            }
+
+            &__GhostLights{
+                top: 500px;
+                left: 700px;
+                width: 100px;
+                height: 100px;
+                background-color: rgba(0, 0, 255, 0.5);
+                color: white;
+                text-align: center;
+                position: absolute;
+            }
+
+            &__MaryCeleste{
+                top: 500px;
+                left: 900px;
+                width: 100px;
+                height: 100px;
+                background-color: rgba(0, 0, 255, 0.5);
+                color: white;
+                text-align: center;
+                position: absolute;
+            }
+
+            &__SubMarines{
+                top: 700px;
+                left: 700px;
+                width: 100px;
+                height: 100px;
+                background-color: rgba(0, 0, 255, 0.5);
+                color: white;
+                text-align: center;
+                position: absolute;
+            }
+
+            &__Bloop{
+                top: 500px;
+                left: 500px;
+                width: 100px;
+                height: 100px;
+                background-color: rgba(0, 0, 255, 0.5);
+                color: white;
+                text-align: center;
+                position: absolute;
+            }
+
+            &__Cryptids{
+                top: 700px;
+                left: 500px;
+                width: 100px;
+                height: 100px;
+                background-color: rgba(0, 0, 255, 0.5);
+                color: white;
+                text-align: center;
+                position: absolute;
+            }
         }
 }
-
 
 </style>
