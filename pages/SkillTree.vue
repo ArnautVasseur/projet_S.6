@@ -60,7 +60,7 @@ let Achievements = [
         ID: "SkillTree_0",
         Name: "Départ",
         Tooltip: "Cette partie vous est gratuite",
-        checked: ref(false),
+        checked: ref(true),
         parents:[]
     },
     {
@@ -128,13 +128,17 @@ let Achievements = [
     },
 ]
 
-function checkbox(skill: { checked: { value: boolean } }) {
-    if(skill.checked.value == false){
-        skill.checked.value = true;
+function checkbox(skill: { checked: { value: boolean }; parent?: string[] }) {
+    if (skill.checked.value === false) {
+        // Check if any parent is checked
+        if (skill.parent && skill.parent.some(parentId => Achievements.find(parent => parent.ID === parentId)?.checked.value)) {
+            skill.checked.value = true;
+        } else {
+            console.log("Cannot click because one of the parents is not checked");
+        }
+    } else {
+        console.log("Case déjà cochée");
     }
-    else{
-        console.log("case déjà cochée")
-    }   
 }
 
 </script>
