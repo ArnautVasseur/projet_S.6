@@ -1,51 +1,51 @@
 <template>
     <div class="SkillTree">
         <div class="SkillTree__Start">
-            <div class="SkillTree__Item__Départ" @click="checkbox(Skills[0])">
-                <p>{{ Skills[0].Name }}</p>
-                <p>{{ Skills[0].checked }}</p>
+            <div class="SkillTree__Item__Départ" @click="checkbox(Achievements[0])">
+                <p>{{ Achievements[0].Name }}</p>
+                <p>{{ Achievements[0].checked }}</p>
             </div>
-            <div class="SkillTree__Item__Bermudes" @click="checkbox(Skills[0].children[0])">
-                <p>{{ Skills[0].children[0].Name }}</p>
-                <p>{{ Skills[0].children[0].checked }}</p>
+            <div class="SkillTree__Item__Bermudes" @click="checkbox(Achievements[1])">
+                <p>{{ Achievements[1].Name }}</p>
+                <p>{{ Achievements[1].checked }}</p>
             </div>
         </div>
         <div class="SkillTree__Locations">
-            <div class="SkillTree__Item__Dragon" @click="checkbox(Skills[0].children[0].children[2])">
-                <p>{{ Skills[0].children[0].children[2].Name }}</p>
-                <p>{{ Skills[0].children[0].children[2].checked }}</p>
+            <div class="SkillTree__Item__Dragon" @click="checkbox(Achievements[7])">
+                <p>{{ Achievements[7].Name }}</p>
+                <p>{{ Achievements[7].Name }}</p>
             </div>
-            <div class="SkillTree__Item__DeadZone" @click="checkbox(Skills[0].children[0].children[3])">
-                <p>{{ Skills[0].children[0].children[3].Name }}</p>
-                <p>{{ Skills[0].children[0].children[3].checked }}</p>
+            <div class="SkillTree__Item__DeadZone" @click="checkbox(Achievements[9])">
+                <p>{{ Achievements[9].Name }}</p>
+                <p>{{ Achievements[9].checked }}</p>
             </div>
-            <div class="SkillTree__Item__MarianaTrench" @click="checkbox(Skills[0].children[0].children[2].children[0])">
-                <p>{{ Skills[0].children[0].children[2].children[0].Name }}</p>
-                <p>{{ Skills[0].children[0].children[2].children[0].checked }}</p>
+            <div class="SkillTree__Item__MarianaTrench" @click="checkbox(Achievements[8])">
+                <p>{{ Achievements[8].Name }}</p>
+                <p>{{ Achievements[8].checked }}</p>
             </div>
         </div>
         <div class="SkillTree__Disappearances">
-            <div class="SkillTree__Item__GhostLights" @click="checkbox(Skills[0].children[0].children[0])">
-                <p>{{ Skills[0].children[0].children[0].Name }}</p>
-                <p>{{ Skills[0].children[0].children[0].checked }}</p>
+            <div class="SkillTree__Item__GhostLights" @click="checkbox(Achievements[2])">
+                <p>{{ Achievements[2].Name }}</p>
+                <p>{{ Achievements[2].checked }}</p>
             </div>
-            <div class="SkillTree__Item__MaryCeleste" @click="checkbox(Skills[0].children[0].children[0].children[0])">
-                <p>{{ Skills[0].children[0].children[0].children[0].Name }}</p>
-                <p>{{ Skills[0].children[0].children[0].children[0].checked }}</p>
+            <div class="SkillTree__Item__MaryCeleste" @click="checkbox(Achievements[4])">
+                <p>{{ Achievements[4].Name }}</p>
+                <p>{{ Achievements[4].checked }}</p>
             </div>
-            <div class="SkillTree__Item__SubMarines" @click="checkbox(Skills[0].children[0].children[0].children[1])">
-                <p>{{ Skills[0].children[0].children[0].children[1].Name }}</p>
-                <p>{{ Skills[0].children[0].children[0].children[1].checked }}</p>
+            <div class="SkillTree__Item__SubMarines" @click="checkbox(Achievements[3])">
+                <p>{{ Achievements[3].Name }}</p>
+                <p>{{ Achievements[3].checked }}</p>
             </div>
         </div>
         <div class="SkillTree__Creatures">
-            <div class="SkillTree__Item__Bloop" @click="checkbox(Skills[0].children[0].children[1])">
-                <p>{{ Skills[0].children[0].children[1].Name }}</p>
-                <p>{{ Skills[0].children[0].children[1].checked }}</p>
+            <div class="SkillTree__Item__Bloop" @click="checkbox(Achievements[5])">
+                <p>{{ Achievements[5].Name }}</p>
+                <p>{{ Achievements[5].checked }}</p>
             </div>
-            <div class="SkillTree__Item__Cryptids" @click="checkbox(Skills[0].children[0].children[1].children[0])">
-                <p>{{ Skills[0].children[0].children[1].children[0].Name }}</p>
-                <p>{{ Skills[0].children[0].children[1].children[0].checked }}</p>
+            <div class="SkillTree__Item__Cryptids" @click="checkbox(Achievements[6])">
+                <p>{{ Achievements[6].Name }}</p>
+                <p>{{ Achievements[6].checked }}</p>
             </div>
         </div>
     </div>
@@ -55,90 +55,77 @@
 
 import { ref } from 'vue';
 
-let Skills = [
+let Achievements = [
     {
         ID: "SkillTree_0",
         Name: "Départ",
         Tooltip: "Cette partie vous est gratuite",
         checked: ref(false),
-        children: [
-            {
-                ID: "SkillTree_1",
-                Name: "Triangle Des Bermudes",
-                Tooltip: "Cette partie vous est gratuite, clickez ici pour la débloquer",
-                checked: ref(false),
-                children: [
-                    {
-                        ID: "SkillTree_2",
-                        Name: "Vaisseaux fantômes de la mer Baltique",
-                        Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
-                        checked: ref(false),
-                        children: [
-                            {
-                                ID: "SkillTree_3",
-                                Name: "Disparitions Sous-Marins 1968",
-                                Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
-                                checked: ref(false),
-                                children: []
-                            },
-                            {
-                                ID: "SkillTree_4",
-                                Name: "Mary Celeste",
-                                Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
-                                checked: ref(false),
-                                children: []
-                            }
-                        ]
-                    },
-                    {
-                        ID: "SkillTree_5",
-                        Name: "The Bloop",
-                        Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
-                        checked: ref(false),
-                        children: [
-                            {
-                                ID: "SkillTree_6",
-                                Name: "Les cryptides sous-marines",
-                                Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
-                                checked: ref(false),
-                                children: []
-                            }
-                        ]
-                    },
-                    {
-                        ID: "SkillTree_7",
-                        Name: "Triangle du Dragon",
-                        Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
-                        checked: ref(false),
-                        children: [
-                            {
-                                ID: "SkillTree_8",
-                                Name: "La fosse Mariane",
-                                Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
-                                checked: ref(false),
-                                children: []
-                            }
-                        ]
-                    },
-                    {
-                        ID: "SkillTree_9",
-                        Name: "Golf du Mexique, 'Dead Zone'",
-                        Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
-                        checked: ref(false),
-                        children: [
-                            {
-                                ID: "SkillTree_8",
-                                Name: "La fosse Mariane",
-                                Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
-                                checked: ref(false),
-                                children: []
-                            }
-                        ]
-                    }
-                ]
-            },
-        ]
-    }
+        parents:[]
+    },
+    {
+        ID: "SkillTree_1",
+        Name: "Triangle Des Bermudes",
+        Tooltip: "Cette partie vous est gratuite, clickez ici pour la débloquer",
+        checked: ref(false),
+        parent:["SkillTree_0"],
+    },
+    {
+        ID: "SkillTree_2",
+        Name: "Vaisseaux fantômes de la mer Baltique",
+        Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
+        checked: ref(false),
+        parent:["SkillTree_1"],
+    },
+    {
+        ID: "SkillTree_3",
+        Name: "Disparitions Sous-Marins 1968",
+        Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
+        checked: ref(false),
+        parent:["SkillTree_2"],
+    },
+    {
+        ID: "SkillTree_4",
+        Name: "Mary Celeste",
+        Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
+        checked: ref(false),
+        parent:["SkillTree_2"],
+    },
+    {
+        ID: "SkillTree_5",
+        Name: "The Bloop",
+        Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
+        checked: ref(false),
+        parent:["SkillTree_1"],
+    },
+    {
+        ID: "SkillTree_6",
+        Name: "Les Cryptides Sous-Marines",
+        Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
+        checked: ref(false),
+        parent:["SkillTree_5"],
+    },
+    {
+        ID: "SkillTree_7",
+        Name: "Triangle du Dragon",
+        Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
+        checked: ref(false),
+        parent:["SkillTree_1"],
+    },
+    {
+        ID: "SkillTree_8",
+        Name: "La fosse Mariane",
+        Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
+        checked: ref(false),
+        parent:["SkillTree_9", "SkillTree_7"],
+    },
+    {
+        ID: "SkillTree_9",
+        Name: "Golf du Mexique, 'Dead Zone'",
+        Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
+        checked: ref(false),
+        parent:["SkillTree_1"],
+    },
 ]
 
 function checkbox(skill: { checked: { value: boolean } }) {
