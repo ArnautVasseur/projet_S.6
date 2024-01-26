@@ -48,13 +48,13 @@ export default {
       // Assuming the input will be a string containing only N, E, S, W
       return this.instructionInput.split("").map((char) => {
         switch (char.toUpperCase()) {
-          case "N":
-            return [-1, 0];
-          case "E":
-            return [0, 1];
-          case "S":
-            return [1, 0];
           case "W":
+            return [-1, 0];
+          case "S":
+            return [0, 1];
+          case "E":
+            return [1, 0];
+          case "N":
             return [0, -1];
           default:
             return [0, 0]; // Ignore invalid characters
