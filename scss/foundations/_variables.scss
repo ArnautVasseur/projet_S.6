@@ -1,0 +1,18 @@
+//Colors
+$primary-color: #020015;
+$gradiant_purple: linear-gradient(#3D23F4, #641AF4, #8A11F5);
+$gradiant_blue: linear-gradient(#401FBF, #1C70D7, #1187DB);
+$gradiant_green: linear-gradient(#01DE99, #01C690, #01A484);
+$gradiant_teal: linear-gradient(#07A6D2, #05BAB9, #05CBA5);
+
+
+//Typography
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+$montserrat: "Montserrat", sans-serif;
+$desktop_h1: 2rem;
+$desktop_h2: 1.5rem;
+$desktop_large: 1.125rem;
+$desktop_regular: 1rem;
+$desktop_small: 0.875rem;
+$desktop_caption: 0.875rem;
