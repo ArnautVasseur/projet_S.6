@@ -1,2 +1,6 @@
 @import '../scss/foundations/variables';
 @import '../scss/foundations/reset';
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}

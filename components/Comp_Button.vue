@@ -10,19 +10,21 @@
 
 <style scoped lang="scss">
 .btn{
+    text-transform: uppercase;
+    background: none;
     font-family: $montserrat;
     font-size: $desktop-h2;
-    background: $primary-color;
-    border: 2px solid $primary-color;
-    border-radius: 30px;
-    padding: 7px 30px 7px 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 7px 20px 7px 20px;
+    letter-spacing: 3px;
     color: $text_button-color;
-    filter: drop-shadow(0 0 20px $primary-color);
-    
+    cursor: pointer;
+    transition: ease-in 200ms;
 }
 
 .btn:hover{
-    transition: ease-in 200ms;
-    filter: drop-shadow(0 0 15px $primary-color) drop-shadow(0 0 50px $primary-color);
+    background: white;
+    color: black;
 }
 </style>
