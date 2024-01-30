@@ -21,7 +21,7 @@
         radial-gradient(20% 30% at 30% 1%, #8A4FFF4D 9%, #073AFF00 100%),
         linear-gradient(320deg, #020015 42%, #291379FF 100%);
     background-position: right bottom;
-    background-size: 120%; /* Adjust the background size as needed */
+    background-size: 120%;
     background-repeat: no-repeat;
 
     &__section__1 {

@@ -62,12 +62,12 @@ export default {
     position: relative;
     width: 800px;
     height: 400px;
-    background: rgba($teal-color, 0.30);
+    background: $purple-color;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 1s;
-    
+    transition: 1s ease-in-out;
+    animation: SlideInTop 1s ease-out;
 
     .formBx{
         position: absolute;
@@ -76,14 +76,13 @@ export default {
         background: $primary-color;
         left: 50px;
         z-index: 1000;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, .15);
         transition: 1s;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         overflow: hidden;
-        box-shadow: 0px 0px 20px $teal-color;
+        box-shadow: 0px 0px 20px $purple-color;
 
         form{
             display: flex;
@@ -231,12 +230,12 @@ export default {
 }
 
 .slide{
-    background: $purple-color;
+    background: $deep_blue-color;
 
     .formBx{
         left: 400px;
         transition: 1s;
-        box-shadow: 0px 0px 15px $purple-color;
+        box-shadow: 0px 0px 15px $deep_blue-color;
 
         &__inscription{
             opacity: 1;
@@ -248,6 +247,17 @@ export default {
             opacity: 0;
             top: 100%;
         }
+    }
+}
+
+@keyframes SlideInTop{
+    0%{
+        opacity: 0;
+        transform: translateY(50%)
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%)
     }
 }
 </style>
