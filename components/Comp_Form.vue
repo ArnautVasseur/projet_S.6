@@ -129,14 +129,12 @@ export default {
 
                 input:focus ~ span,
                 input:not(:placeholder-shown) ~ span{
-                    color: aqua;
+                    color: lighten($purple-color, 25%);
                     transition: 0.5s;
                     top: -22%;
                     left: 10px;
                     padding: 5px;
                     font-size: $desktop-caption;
-                    border-right: 1px solid white;
-                    border-left: 1px solid white;
                     background: $primary-color;
                 }
 
@@ -186,14 +184,12 @@ export default {
 
                 input:focus ~ span,
                 input:not(:placeholder-shown) ~ span{
-                    color: aqua;
+                    color:lighten($deep_blue-color, 40%);
                     transition: 0.5s;
                     top: -22%;
                     left: 10px;
                     padding: 5px;
                     font-size: $desktop-caption;
-                    border-right: 1px solid white;
-                    border-left: 1px solid white;
                     background: $primary-color;
                 }
 

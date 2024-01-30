@@ -17,7 +17,7 @@
     border: 2px solid white;
     border-radius: 10px;
     padding: 7px 20px 7px 20px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: $text_button-color;
     cursor: pointer;
     transition: ease-in 200ms;
@@ -26,5 +26,6 @@
 .btn:hover{
     background: white;
     color: black;
+    letter-spacing: 3px;
 }
 </style>
