@@ -9,6 +9,10 @@ export default defineNuxtConfig({
       },
     ],
 
+    modules: [
+      "@pinia/nuxt"
+    ],
+
     css: ["@/scss/main.scss"],
 
     vite: {

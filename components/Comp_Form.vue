@@ -2,44 +2,95 @@
     <div class="form" :class="{ slide: isActive }">
         <div class="form__signin box">
             <h2>Vous avez déjà un compte ?</h2>
-            <Comp_Button @click="SwitchConnexion" class="form__signin__btn">Connexion</Comp_Button>
+            <Comp_Button @click="Switchlogin" class="form__signin__btn">login</Comp_Button>
         </div>
         <div class="form__signup box">
             <h2>Vous n'avez pas de compte ?</h2>
-            <Comp_Button @click="SwitchConnexion" class="form__signup__btn">Inscription</Comp_Button>
+            <Comp_Button @click="Switchlogin" class="form__signup__btn">Inscription</Comp_Button>
         </div>
         <div class="formBx">
             <div class="formBx__inscription">
-                <form>
+                <form @submit.prevent="inscription">
                     <h2>Inscription</h2>
                     <div class="formBx__inscription__input">
-                        <input placeholder=" " type="text">
+                        <input v-model="inscriptionData.username" placeholder=" " type="text">
                         <span>Pseudonyme</span>
                     </div>
                     <div class="formBx__inscription__input">
-                        <input placeholder=" " type="password">
+                        <input v-model="inscriptionData.password" placeholder=" " type="password">
                         <span>Mot de passe</span>
                     </div>
                     <Comp_Button>INSCRIPTION</Comp_Button>
                 </form>
             </div>
             <div class="formBx__connection">
-                <form>
-                    <h2>Connexion</h2>
+                <form @submit.prevent="login">
+                    <h2>login</h2>
                     <div class="formBx__connection__input">
-                        <input placeholder=" " type="text">
+                        <input v-model="loginData.username" placeholder=" " type="text">
                         <span>Pseudonyme</span>
                     </div>
                     <div class="formBx__connection__input">
-                        <input placeholder=" " type="password">
+                        <input v-model="loginData.password" placeholder=" " type="password">
                         <span>Mot de passe</span>
                     </div>
-                    <Comp_Button>CONNEXION</Comp_Button>
+                    <Comp_Button>Connexion</Comp_Button>
                 </form>
             </div>
         </div>
     </div>
 </template>
+
+<script setup>
+import {API} from "../utils/axios"
+import { ref } from 'vue';
+import { useGlobalStore } from '../stores/global'
+
+// Accéder au store global
+const globalStore = useGlobalStore()
+
+// Fonction pour définir le token
+const setToken = (token) => {
+  globalStore.setToken(token)
+}
+
+const inscriptionData = ref({
+  username: '',
+  password: '',
+});
+
+const loginData = ref({
+  username: '',
+  password: '',
+});
+
+const login = async () => {
+  try {
+    const response = await API.post('/login', loginData.value);
+    // localStorage.setItem('token', JSON.stringify(response.data.userId))
+      globalStore.setToken(response.data.token)
+    // Optionally, you can reset the form data after successful login
+    loginData.value.username = '';
+    loginData.value.password = '';
+  } catch (error) {
+    console.error('Error during login:', error);
+  }
+};
+
+
+const inscription = async () => {
+  try {
+    const response = await API.post('/inscription', inscriptionData.value);
+
+    // Optionally, you can reset the form data after successful submission
+    inscriptionData.value.username = '';
+    inscriptionData.value.password = '';
+  } catch (error) {
+    console.error('Error during inscription:', error.message);
+  }
+};
+
+</script>
 
 <script>
 export default {
@@ -49,7 +100,7 @@ export default {
         };
     },
     methods: {
-        SwitchConnexion() {
+        Switchlogin() {
             this.isActive = !this.isActive
         },
     },
