@@ -10,9 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@pinia/nuxt": "^0.5.1",
     "axios": "^1.6.5",
     "nuxt": "^3.9.0",
-    "@pinia/nuxt": "^0.5.1",
     "pinia": "^2.1.7",
     "sass": "^1.69.7",
     "three": "^0.160.0",
@@ -22,5 +22,8 @@
   },
   "engines": {
     "node": "20.0.0"
-  }  
+  },
+  "dependencies": {
+    "shuutils": "^7.7.0"
+  }
 }
