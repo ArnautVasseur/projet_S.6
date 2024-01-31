@@ -23,7 +23,7 @@
                         <li><RouterLink to="/articles/marianatrench">Fosse Mariane</RouterLink></li>
                         <li><RouterLink to="/articles/bloop">The Bloop</RouterLink></li>
                         <li><RouterLink to="/articles/cryptids">Les Cryptides sous-marines</RouterLink></li>
-                        <li><RouterLink to="/articles/ghostships">Les vaisseaux fantômes de la mer Baltique</RouterLink></li>
+                        <li><RouterLink to="/articles/ghostships">Les Vaisseaux Fantômes</RouterLink></li>
                         <li><RouterLink to="/articles/maryceleste">Mary Celeste</RouterLink></li>
                         <li><RouterLink to="/articles/1968">Les disparitions de 1968</RouterLink></li>
                     </ul>
@@ -45,7 +45,6 @@
                 </li>
             </div>
         </ul>
-        
     </nav>
 </template>
 
@@ -58,9 +57,11 @@ export default {
 <style scoped lang="scss">
 
 .header{
+    z-index: 1000;
     position: sticky;
-    width: 100vw;
-    background-image: linear-gradient(0deg, #030020 0%, #010D50 100%);
+    top: 0;
+    width: 100%;
+    background:$primary-color;
     height: 13vh;
     display: flex;
     align-content: center;
@@ -105,23 +106,30 @@ nav{
         li{
 
             ul{ 
+                padding: 20px;
                 display: none;
                 position: absolute;
                 overflow: hidden;
-                width: fit-content;
+                width: 450px;
+                transform: translateX(-40%);
                 background-color: $primary-color;
                 text-align: center;
+                border-bottom: 10px solid $teal-color;
 
                 li{
                     padding: 10px;
                     display: block;
                     width: 100%;
                     height: 100%;
+
+                    :hover{
+                        color: $text_button-color;
+                        border-left: 5px solid $text_button-color;
+                        transition: 0.2s ease-in-out;
+                    }
                 }
 
-            :hover{
-                background: $teal-color;
-            }
+            
 
             }
             

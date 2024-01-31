@@ -6,3 +6,15 @@
     transition: 0.5s;
     position: absolute;
 }
+
+@mixin Article__title{
+    font-size: $desktop_article_title;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@mixin h2{
+    font-size: $desktop_h2;
+    font-weight: 400;
+}
