@@ -2,7 +2,7 @@
     <div class="form" :class="{ slide: isActive }">
         <div class="form__signin box">
             <h2>Vous avez déjà un compte ?</h2>
-            <Comp_Button @click="Switchlogin" class="form__signin__btn">login</Comp_Button>
+            <Comp_Button @click="Switchlogin" class="form__signin__btn">Connexion</Comp_Button>
         </div>
         <div class="form__signup box">
             <h2>Vous n'avez pas de compte ?</h2>
@@ -25,7 +25,7 @@
             </div>
             <div class="formBx__connection">
                 <form @submit.prevent="login">
-                    <h2>login</h2>
+                    <h2>Connexion</h2>
                     <div class="formBx__connection__input">
                         <input v-model="loginData.username" placeholder=" " type="text">
                         <span>Pseudonyme</span>
@@ -277,12 +277,12 @@ export default {
 }
 
 .slide{
-    background: $deep_blue-color;
+    background: $blue-color;
 
     .formBx{
         left: 400px;
         transition: 1s;
-        box-shadow: 0px 0px 15px $deep_blue-color;
+        box-shadow: 0px 0px 15px $blue-color;
 
         &__inscription{
             opacity: 1;
