@@ -42,9 +42,11 @@
 </template>
 
 <script setup>
-import {API} from "../utils/axios"
+import { API } from "../utils/axios"
 import { ref } from 'vue';
 import { useGlobalStore } from '../stores/global'
+
+const router = useRouter()
 
 // Accéder au store global
 const globalStore = useGlobalStore()
@@ -72,6 +74,7 @@ const login = async () => {
     // Optionally, you can reset the form data after successful login
     loginData.value.username = '';
     loginData.value.password = '';
+    router.push('/skilltree')
   } catch (error) {
     console.error('Error during login:', error);
   }
