@@ -124,6 +124,16 @@ export default {
     },
   },
 };
+
+//renvoie l'user sur l'index s'il n'est pas connecté
+definePageMeta({
+  middleware: [
+    function (to, from) {
+    },
+    'auth',
+  ],
+});
+
 </script>
 
 <style scoped>
