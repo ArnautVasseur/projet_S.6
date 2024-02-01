@@ -270,7 +270,7 @@ export default {
 
         h2{
             color: white;
-            font-size: $desktop-h2;
+            font-size: $desktop-large;
             margin-bottom: 20px;
         }
     }

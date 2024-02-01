@@ -63,6 +63,8 @@
             </div>
         </div>
         <div class="main__2">
+            <p>Points: {{ Points }}</p>
+            <p v-if="errormessage" class="pointserror">Vous n'avez plus de points !</p>
         </div>
     </div>
 </template>
@@ -70,6 +72,21 @@
 <script setup lang="ts">
 
 import { ref } from 'vue';
+import { onMounted } from 'vue';
+const store = useGlobalStore();
+
+let Points = ref(0);
+let errormessage = ref(false)
+
+const getPoints = async () => {
+    const response = await API.get(`/users/${store.token}`)
+    Points.value = response.data.points
+}
+
+onMounted(async () => {
+    await store.token
+    await getPoints()
+})
 
 let Achievements = [
     {
@@ -153,19 +170,86 @@ interface Achievement {
 }
 
 function checkbox(skill: Achievement) {
-    if (skill.checked.value === false) {
+    if(Points.value <= 0){
+        console.log("Vous n'avez plus assez de points");
+        errormessage.value = true;
+    }
+    else{
+        if (skill.checked.value === false) {
         // Check if any parent is checked
         if (skill.parent && skill.parent.some(parentId => Achievements.find(parent => parent.ID === parentId)?.checked.value)) {
             // Display confirmation dialog
             if (window.confirm(`Are you sure you want to check ${skill.Name}?`)) {
+                const NewPoints = Points.value - 1;
+                updatePoints(store.token, NewPoints);
+                Points.value = NewPoints;
+                console.log("points: " + Points.value);
                 skill.checked.value = true;
-                if (skill.ID === 'SkillTree_1') {
+
                 const bermudesItem = document.querySelector('.SkillTree__Item__Bermudes');
-                const line1 = document.querySelector('.SkillTree__Lines__1')
-                    if (bermudesItem && line1) {
-                        bermudesItem.classList.add('checked');
-                        line1.classList.add('checked')
-                    }
+                const ghostlightItem = document.querySelector('.SkillTree__Item__GhostLights');
+                const submarineItem = document.querySelector('.SkillTree__Item__SubMarines');
+                const dragonItem = document.querySelector('.SkillTree__Item__Dragon');
+                const marycelesteItem = document.querySelector('.SkillTree__Item__MaryCeleste');
+                const bloopItem = document.querySelector('.SkillTree__Item__Bloop');
+                const cryptidsItem = document.querySelector('.SkillTree__Item__Cryptids');
+                const marianatrenchItem = document.querySelector('.SkillTree__Item__MarianaTrench');
+                const deadzoneItem = document.querySelector('.SkillTree__Item__DeadZone');
+
+                switch(skill.ID){
+                    case 'SkillTree_1':
+                            if (bermudesItem) {
+                                bermudesItem.classList.add('checked');
+                            }
+                        break;
+
+                    case 'SkillTree_2':
+                            if (ghostlightItem) {
+                                ghostlightItem.classList.add('checked');
+                            }
+                        break;
+
+                    case 'SkillTree_3':
+                            if (submarineItem) {
+                                submarineItem.classList.add('checked');
+                            }
+                        break;
+
+                    case 'SkillTree_4':
+                            if (marycelesteItem) {
+                                marycelesteItem.classList.add('checked');
+                            }
+                        break;
+
+                    case 'SkillTree_5':
+                            if (bloopItem) {
+                                bloopItem.classList.add('checked');
+                            }
+                        break;
+
+                    case 'SkillTree_6':
+                            if (cryptidsItem) {
+                                cryptidsItem.classList.add('checked');
+                            }
+                        break;
+
+                    case 'SkillTree_7':
+                            if (dragonItem) {
+                                dragonItem.classList.add('checked');
+                            }
+                        break;
+
+                    case 'SkillTree_8':
+                            if (marianatrenchItem) {
+                                marianatrenchItem.classList.add('checked');
+                            }
+                        break;
+
+                    case 'SkillTree_9':
+                            if (deadzoneItem) {
+                                deadzoneItem.classList.add('checked');
+                            }
+                        break;
                 }
             }
         } else {
@@ -174,7 +258,18 @@ function checkbox(skill: Achievement) {
     } else {
         console.log("Case déjà cochée");
     }
+    }
+    
 }
+
+const updatePoints = async (userID: number | null, NewPoints: number) => {
+    try {
+        const response = await API.put(`/users/${userID}/points/${NewPoints}`, { points: NewPoints });
+        console.log("Points updated successfully:", response.data);
+    } catch (error) {
+        console.error("Error updating points:", error);
+    }
+};
 
 </script>
 

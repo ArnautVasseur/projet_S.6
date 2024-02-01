@@ -1,32 +1,31 @@
 <template>
-    <ul class="list">
+    <!-- <ul class="list">
       <li v-for="user in Users" :key="user.username" >
         {{ user.user_ID }} | {{ user.username }}
       </li>
-    </ul>
+    </ul> -->
+    <div>
+      <p>Points: {{ Points }}</p>
+    </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import { onMounted } from 'vue';
+const store = useGlobalStore();
 
-const props = defineProps(['id']);
+const Points = ref();
 
-const Users = ref([]);
+const getPoints = async () => {
+    const response = await API.get(`/users/${store.token}`)
+    Points.value = response.data.points
+}
 
 onMounted(async () => {
-  try {
-    const [
-      { data: UsersData },
-    ] = await Promise.all([
-      API.get(`/Users`),
-    ]);
+    await store.token
+    await getPoints()
+})
 
-    Users.value = UsersData;
-  } catch (error) {
-    console.error('Error fetching data:', error.message);
-  }
-});
 </script>
 
 <style lang="scss">

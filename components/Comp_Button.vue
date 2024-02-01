@@ -13,7 +13,7 @@
     text-transform: uppercase;
     background: none;
     font-family: $montserrat;
-    font-size: $desktop-h2;
+    font-size: $desktop-large;
     border: 2px solid white;
     border-radius: 10px;
     padding: 7px 20px 7px 20px;
