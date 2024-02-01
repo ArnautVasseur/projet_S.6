@@ -64,6 +64,11 @@
         </div>
         <div class="main__2">
             <p>Points: {{ Points }}</p>
+            <ul>
+                <li v-for="achieve in achievement" :key="achieve.name">
+                    {{ achieve.name }}
+                </li>
+            </ul>
             <p v-if="errormessage" class="pointserror">Vous n'avez plus de points !</p>
         </div>
     </div>
@@ -75,7 +80,8 @@ import { ref } from 'vue';
 import { onMounted } from 'vue';
 const store = useGlobalStore();
 
-let Points = ref(0);
+let Points = ref();
+let achievement = ref<Array<{ name: string }>>([]);
 let errormessage = ref(false)
 
 const getPoints = async () => {
@@ -83,9 +89,23 @@ const getPoints = async () => {
     Points.value = response.data.points
 }
 
+const getAchievement = async () => {
+    const response = await API.get(`/achievements/${store.token}`);
+    achievement.value = response.data
+    const userAchievements = response.data.map((ach: { name: string }) => ach.name);
+    console.log(userAchievements)
+
+    // Update the Achievements array to set checked to true if the achievement is in the user's achievements
+    Achievements.forEach((ach) => {
+        ach.checked.value = userAchievements.includes(ach.Name);
+        console.log(ach.checked.value)
+    });
+};
+
 onMounted(async () => {
     await store.token
     await getPoints()
+    await getAchievement()
 })
 
 let Achievements = [
@@ -140,7 +160,7 @@ let Achievements = [
     },
     {
         ID: "SkillTree_7",
-        Name: "Triangle du Dragon",
+        Name: "Triangle Du Dragon",
         Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
         checked: ref(false),
         parent:["SkillTree_1"],
@@ -160,6 +180,10 @@ let Achievements = [
         parent:["SkillTree_1"],
     },
 ]
+
+interface AchievementItem {
+    name: string;
+}
 
 interface Achievement {
     ID: string;
@@ -271,6 +295,15 @@ const updatePoints = async (userID: number | null, NewPoints: number) => {
     }
 };
 
+const addAchievement = async (userID: number | null, NewAchievement: number) => {
+    try {
+        const response = await API.put(`/users/${userID}/achievement/${NewAchievement}`, { achievement: NewAchievement });
+        console.log("Achievement added successfully:", response.data);
+    } catch (error) {
+        console.error("Error updating points:", error);
+    }
+};
+
 </script>
 
 <style lang="scss">
@@ -311,10 +344,7 @@ const updatePoints = async (userID: number | null, NewPoints: number) => {
             left: 50%;
             transform: translate(-50%, -50%);
 
-            &.checked {
-                background-color: white;
-                color: black;
-            }
+            
         }
 
         &__Bermudes{
@@ -325,10 +355,7 @@ const updatePoints = async (userID: number | null, NewPoints: number) => {
             left: 50%;
             transform: translate(-50%, -50%);
 
-            &.checked {
-                background-color: white;
-                color: black;
-            }
+            
         }
 
         &__Dragon{
@@ -339,10 +366,7 @@ const updatePoints = async (userID: number | null, NewPoints: number) => {
             left: 27.5%;
             transform: translate(-50%, -50%);
 
-            &.checked {
-                background-color: white;
-                color: black;
-            }
+            
         }
 
         &__DeadZone{
@@ -353,10 +377,7 @@ const updatePoints = async (userID: number | null, NewPoints: number) => {
             left: 27.5%;
             transform: translate(-50%, -50%);
 
-            &.checked {
-                background-color: white;
-                color: black;
-            }
+            
         }
 
         &__MarianaTrench{
@@ -367,10 +388,7 @@ const updatePoints = async (userID: number | null, NewPoints: number) => {
             left: 10%;
             transform: translate(-50%, -50%);
 
-            &.checked {
-                background-color: white;
-                color: black;
-            }
+            
         }
 
         &__GhostLights{
@@ -381,10 +399,7 @@ const updatePoints = async (userID: number | null, NewPoints: number) => {
             left: 72.5%;
             transform: translate(-50%, -50%);
 
-            &.checked {
-                background-color: white;
-                color: black;
-            }
+            
         }
 
         &__MaryCeleste{
@@ -395,10 +410,7 @@ const updatePoints = async (userID: number | null, NewPoints: number) => {
             left: 90%;
             transform: translate(-50%, -50%);
 
-            &.checked {
-                background-color: white;
-                color: black;
-            }
+            
         }
 
         &__SubMarines{
@@ -409,10 +421,7 @@ const updatePoints = async (userID: number | null, NewPoints: number) => {
             left: 90%;
             transform: translate(-50%, -50%);
 
-            &.checked {
-                background-color: white;
-                color: black;
-            }
+            
         }
 
         &__Bloop{
@@ -423,10 +432,7 @@ const updatePoints = async (userID: number | null, NewPoints: number) => {
             left: 50%;
             transform: translate(-50%, -50%);
 
-            &.checked {
-                background-color: white;
-                color: black;
-            }
+            
         }
 
         &__Cryptids{
@@ -437,10 +443,7 @@ const updatePoints = async (userID: number | null, NewPoints: number) => {
             left: 72.5%;
             transform: translate(-50%, -50%);
 
-            &.checked {
-                background-color: white;
-                color: black;
-            }
+            
         }
     }
 
