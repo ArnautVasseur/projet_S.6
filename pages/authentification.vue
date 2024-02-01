@@ -1,11 +1,24 @@
 <template>
     <body class="container">
-        <div class="container__section__1"></div>
+        <div class="container__section__1">
+            <Comp_Button @click="deconnexion">Déconnexion</Comp_Button>
+        </div>
         <div class="container__section__2">
             <Comp_Form></Comp_Form>
         </div>
     </body>
 </template>
+
+<script setup>
+
+const store = useGlobalStore();
+
+const deconnexion = async () => {
+    store.clearToken()
+    router.push('/authentification')
+}
+
+</script>
 
 <style scoped lang="scss">
 .container{
