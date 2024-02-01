@@ -102,11 +102,7 @@ definePageMeta({
   ],
 });
 
-export default {
-  meta: {
-    requiresUnlock: 'Les Cryptides Sous-Marines',
-  },
-};
+
 
 </script>
 

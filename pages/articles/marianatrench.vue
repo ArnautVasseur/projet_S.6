@@ -4,6 +4,14 @@
 
 <script>
 
+definePageMeta({
+  middleware: [
+    function (to, from) {
+    },
+    'auth',
+  ],
+});
+
 </script>
 
 <style>

@@ -3,9 +3,15 @@
 </template>
 
 <script>
-export default {
 
-}
+definePageMeta({
+  middleware: [
+    function (to, from) {
+    },
+    'auth',
+  ],
+});
+
 </script>
 
 <style>
