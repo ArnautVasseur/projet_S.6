@@ -27,7 +27,7 @@ function startGame() {
 }
 </script>
 
-<script>
+<script lang="ts">
 
 //renvoie l'user sur l'index s'il n'est pas connecté
 definePageMeta({

@@ -1,5 +1,5 @@
 <template>
-  
+  <Comp_Header class="header"></Comp_Header>
 </template>
 
 <script>
@@ -12,6 +12,12 @@ definePageMeta({
     'auth',
   ],
 });
+
+export default {
+  meta: {
+    requiresUnlock: 'The Bloop',
+  },
+};
 
 </script>
 

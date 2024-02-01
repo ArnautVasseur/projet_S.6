@@ -1,4 +1,5 @@
 <template>
+    <Comp_Header class="header"></Comp_Header>
     <div>Articles</div>
 </template>
 

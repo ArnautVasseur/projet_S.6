@@ -102,6 +102,12 @@ definePageMeta({
   ],
 });
 
+export default {
+  meta: {
+    requiresUnlock: 'Les Cryptides Sous-Marines',
+  },
+};
+
 </script>
 
 <style scoped lang="scss">
@@ -231,7 +237,7 @@ h2{
 
 .image_1{
     margin-left: 15%;
-    margin-top: -30px;
+    margin-top: -50px;
     width: 55%;
     height: auto;
     position: absolute;
