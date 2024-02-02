@@ -2,89 +2,46 @@
   <Comp_Header class="header"></Comp_Header>
   <div v-if="store.achievement__5" class="main">
         <div class="main__presentation">
-            Les Cryptides sous-marines 
+            Le Bloop
         </div>
         <div class="main__article">
             <div class="main__article__introduction">
                 <div class="main__article__introduction__content">
-                    <h2>À la découverte des mystérieux habitants des profondeurs</h2>
                     <div class="main__article__introduction__content__texte">
-                        <p>Les océans de notre planète demeurent l'un des endroits les moins explorés et les plus mystérieux de la Terre. <br/><br/> Les vastes étendues d'eau qui couvrent la majorité de notre globe sont le foyer de créatures fascinantes et énigmatiques, souvent décrites dans le folklore et les récits anciens.<br/> Ces créatures, appelées cryptides sous-marines, suscitent l'imagination et alimentent le mystère entourant les profondeurs inexplorées.<br/><br/> Dans cet article, nous plongerons dans l'univers mystique des cryptides sous-marines, explorant sept de ces créatures fascinantes et découvrant les récits qui les entourent.</p>
+                        <h2>Les Mystères du "Bloop" : Un Son sous-marin Énigmatique</h2>
+                        <p>Les profondeurs de l'océan abritent une symphonie mystérieuse, un monde sonore caché qui défie parfois l'entendement humain. <br/><br/> Parmi les nombreux phénomènes énigmatiques, le "Bloop" se distingue comme l'un des mystères les plus captivants des abysses océaniques. <br/><br/>Dans cet article, nous plongerons dans l'histoire de ce son sous-marin mystérieux, explorant les théories et les spéculations qui entourent le "Bloop" et son impact sur la compréhension de notre monde océanique.</p>
                     </div>
-                </div>
-                <div class="main__article__introduction__content__images">
-                    <img class="image_1" src="/creatures/creature_1.jpg" alt="creature_1">
+                    <div class="main__article__introduction__content__images">
+                        <img class="image_8" src="/creatures/creature_8.jpg" alt="creature_8">
+                    </div>
                 </div>
             </div>
             <div class="main__article__content">
-                <div class="main__article__content__boxleft">
-                    <img class="main__article__content__boxleft__image" src="/creatures/kraken.jpg" alt="creature_kraken">
-                    <div class="main__article__content__boxleft__texte">
-                        <h2 class="main__article__content__boxleft__title">Le Kraken</h2>
-                        <p>
-                            Le Kraken, issu des légendes scandinaves, est souvent décrit comme un calmar gigantesque aux tentacules incommensurables. <br/><br/>Les premières mentions de cette créature datent des sagas nordiques, où elle était accusée de détruire des navires en un seul coup de tentacule. Les marins de l'époque attribuent les disparitions mystérieuses en mer au Kraken. Des récits mentionnent des observations d'encre noire s'élevant à la surface de l'eau après une rencontre avec le Kraken, alimentant la croyance en cette créature monstrueuse.<br/><br/>
-                            Au fil des siècles, des marins ont rapporté des événements étranges, affirmant que des tentacules géants surgissent des profondeurs, déroutant les scientifiques et suscitant des théories sur des créatures encore inconnues. <br/>Certains prétendent avoir vu des marques de ventouses sur les coques de leurs navires après avoir traversé des régions marines réputées pour abriter le Kraken. <br/><br/>Malgré le manque de preuves tangibles, le mythe du Kraken persiste dans la culture populaire et continue d'alimenter la fascination pour les créatures sous-marines.
-                        </p>
+                <div class="main__article__content__discovery">
+                    <img class="image_8" src="/creatures/bloop.jpg" alt="creature_8">
+                    <div class="main__article__content__discovery__texte">
+                        <h2>La découverte du "Bloop"</h2>
+                        <p>Le "Bloop" a été enregistré pour la première fois en 1997 par les hydrophones de l'Administration nationale océanique et atmosphérique (NOAA) près de l'Antarctique. <br/><br/> Ce son inhabituel, caractérisé par une amplitude extrêmement puissante, a captivé les scientifiques du monde entier.<br/> L'émission du "Bloop" a été détectée sur une large gamme de fréquences, défiant les caractéristiques typiques des sons émis par les baleines ou d'autres animaux marins.<br/><br/> Quelle que soit son origine, le "Bloop" a eu un impact significatif sur la manière dont nous percevons les mystères des profondeurs océaniques. <br/><br/>En suscitant l'imagination du public, il a renforcé l'intérêt pour l'exploration des abysses et la recherche de créatures inconnues. <br/><br/> Le mystère du "Bloop" rappelle que même à l'ère de la technologie avancée, les océans continuent de cacher des secrets intrigants, incitant les chercheurs à explorer davantage les mystères sous-marins.</p>
                     </div>
                 </div>
-                <div class="main__article__content__boxright">
-                    <div class="main__article__content__boxright__texte">
-                        <h2 class="main__article__content__boxright__title">Le Calamar Géant</h2>
-                        <p>
-                            Le Calamar Géant, bien que réel, a alimenté de nombreuses histoires mystérieuses. <br/>Des marins ont rapporté des observations de tentacules géants s'élevant hors de l'eau, suggérant la présence de créatures bien plus grandes que ce que la science connaissait à l'époque. <br/>Certains rapports font état de rencontres étranges avec des calamar géants qui semblaient délibérément interagir avec les navires. <br/><br/>La réalité de ces créatures a été confirmée par des photographies et des vidéos contemporaines.<br/>
-                            Au-delà de la réalité scientifique, le Calamar Géant a continué à susciter des mystères. Des récits de marins évoquent des expériences troublantes, décrivant des rencontres avec des pieuvres aux dimensions dépassant l'entendement, provoquant des spéculations sur d'éventuelles espèces encore inconnues. <br/><br/>Des photographies floues et des récits contradictoires ont entretenu le mystère entourant ces créatures, suscitant des débats au sein de la communauté scientifique et alimentant l'imagination du grand public.
-                        </p>
+                <div class="main__article__content__theory">
+                    <h2 class="main__article__content__theory__title">Théories et Spéculations</h2>
+                    <div class="main__article__content__theory__texte">
+                        <p>Les spéculations sur l'origine du "Bloop" sont variées et parfois fantaisistes.<br/> L'une des premières théories avancées suggérait qu'il pouvait provenir d'une créature marine inconnue, peut-être même d'une espèce gigantesque cachée dans les profondeurs.<br/><br/> Cependant, la communauté scientifique a rapidement écarté cette idée, soulignant que la fréquence et le volume du son étaient incompatibles avec les caractéristiques biologiques connues.</p>
+                        <p>Une explication plus plausible est venue des scientifiques de la NOAA, qui ont conclu que le "Bloop" était probablement d'origine glaciaire. <br/><br/>Selon cette théorie, le son pourrait résulter du craquement des icebergs en train de se détacher et de s'effondrer dans l'océan.<br/><br/> Bien que cette explication ait apaisé une partie des mystères entourant le "Bloop," certains sceptiques ont continué à émettre des doutes, arguant que la puissance du son dépassait de loin ce qui était attendu pour un phénomène glaciaire.</p>
                     </div>
-                    <img class="main__article__content__boxright__image" src="/creatures/giantsquid.jpg" alt="creature_kraken">
-                </div>
-                <div class="main__article__content__boxleft">
-                    <img class="main__article__content__boxleft__image" src="/creatures/nessie.jpg" alt="creature_kraken">
-                    <div class="main__article__content__boxleft__texte">
-                        <h2 class="main__article__content__boxleft__title"> Le Loch Ness Monster</h2>
-                        <p>
-                            Le Loch Ness Monster, ou Nessie, est souvent décrit comme un monstre aquatique ressemblant à un dinosaure, avec un long cou et une série de bosses émergeant de l'eau.<br/><br/> Les premiers rapports de Nessie remontent au sixième siècle, avec des histoires de rencontres mystérieuses.<br/> En 1934, une photographie controversée, montrant une silhouette de Nessie, a captivé le monde entier. Bien que cette photo ait été largement discréditée plus tard, elle a contribué à la légende du monstre du Loch Ness.<br/><br/>
-                            Au fil des décennies, des milliers de témoignages ont été enregistrés, certains affirmant avoir vu Nessie émerger des eaux du Loch Ness avec une majesté préhistorique. <br/>Des expéditions scientifiques ont été organisées pour percer le mystère, utilisant des technologies de pointe pour sonder les profondeurs du lac. <br/><br/>Des photographies floues, des enregistrements sonores énigmatiques et des témoignages ambigus ont persisté, maintenant le Loch Ness Monster au cœur de l'attention médiatique. <br/><br/>Les chercheurs continuent de chercher des réponses, mais Nessie demeure l'un des mystères les plus persistants de la cryptozoologie.
-                        </p>
-                    </div>
-                </div>
-                <div class="main__article__content__boxright">
-                    <div class="main__article__content__boxright__texte">
-                        <h2 class="main__article__content__boxright__title">Le Dragon de mer</h2>
-                        <p>
-                            Le Dragon de mer, dans la mythologie chinoise, est un serpent marin divin souvent associé à la protection des océans.<br/> Les légendes chinoises décrivent des dragons de
-                            mer à écailles brillantes et aux yeux perçants, capables de contrôler les tempêtes et les marées. <br/><br/>Des marins ont rapporté des rencontres mystérieuses avec des créatures ressemblant à des dragons de mer, associant ces rencontres à des phénomènes météorologiques étranges et à des changements soudains dans les conditions de navigation.<br/><br/>
-                            Les premières mentions du Dragon de mer remontent à l'antiquité chinoise, où des contes populaires et des représentations artistiques détaillées témoignent de l'importance culturelle de cette créature mythique. <br/>Des histoires de marins évoquent des expériences extraordinaires, décrivant des rencontres avec des dragons de mer majestueux qui semblaient guider les navires hors des tempêtes. <br/>Les observateurs ont décrit des manifestations spectaculaires, avec des écailles luisantes reflétant la lumière du soleil et des mouvements gracieux dans les vagues tumultueuses. <br/><br/>Bien que le Dragon de mer reste ancré dans le domaine de la mythologie, son impact culturel et son lien avec la protection des océans perdurent dans l'imaginaire chinois.
-                        </p>
-                    </div>
-                    <img class="main__article__content__boxright__image seaserpent" src="/creatures/sea-serpent.jpg" alt="creature_kraken">
-                </div>
-                <div class="main__article__content__boxleft">
-                    <img class="main__article__content__boxleft__image" src="/creatures/megalodon.jpg" alt="creature_kraken">
-                    <div class="main__article__content__boxleft__texte">
-                        <h2 class="main__article__content__boxleft__title">Le Mégalodon</h2>
-                        <p>
-                            Le Mégalodon, un prédateur préhistorique géant ressemblant à un requin, continue de captiver l'imagination.<br/> Avec des dents pouvant mesurer jusqu'à 18 centimètres de long, cette créature aurait atteint une longueur de plus de 20 mètres.<br/><br/> Bien que les preuves scientifiques de son extinction il y a des millions d'années soient solides, des rapports de rencontres mystérieuses persistent, suggérant que le Mégalodon pourrait encore hanter les océans.<br/> Des témoignages de marins décrivent des rencontres avec des requins géants aux proportions titanesques, alimentant les spéculations sur la possible survie de cette créature légendaire.
-                        </p>
-                    </div>
-                </div>
-                <div class="main__article__content__boxright">
-                    <div class="main__article__content__boxright__texte">
-                        <h2 class="main__article__content__boxright__title">La U-28 Creature</h2>
-                        <p>
-                            La U-28 Creature est entourée de mystères liés à un incident survenu pendant la Première Guerre mondiale. <br/>En 1915, le sous-marin allemand U-28 torpille un navire britannique, le SS Iberian, près de l'Irlande. <br/><br/>Après l'attaque, l'équipage du U-28 observe une explosion sous-marine extraordinaire, rapportant avoir vu un objet massif et inconnu être éjecté hors de l'eau.<br/> Certains membres de l'équipage ont décrit cet objet comme une créature semblable à un monstre marin, évoquant la possibilité qu'un animal inconnu ait été catapulté par l'explosion.<br/><br/> Bien que les détails restent flous et que des théories alternatives aient été avancées, la U-28 Creature demeure une énigme de l'histoire maritime, entre réalité et folklore.<br/>
-                        </p>
-                    </div>
-                    <img class="main__article__content__boxright__image U-28" src="/creatures/U-28.webp" alt="creature_kraken">
                 </div>
             </div>
+            
         </div>
         <div class="main__article__conclusion">
-            <div class="main__article__conclusion__content__images">
-                <img class="image_3" src="/creatures/creature_3.jpg" alt="creature_3">
-            </div>
             <div class="main__article__conclusion__content">
                 <div class="main__article__conclusion__content__texte">
-                    <p>En explorant ces six cryptides sous-marins fascinants, nous plongeons dans un monde de mystères et d'histoires captivantes.  <br/><br/> Que ces créatures soient le fruit de l'imagination humaine, des observations mal interprétées ou de véritables rencontres avec des habitants inconnus des profondeurs, elles continuent à susciter la curiosité et à nourrir notre fascination pour les mystères de la mer.  <br/> <br/>Les océans restent une source infinie de découvertes potentielles, et bien que la science ait levé de nombreuses voiles, la frontière entre la réalité et le mythe reste floue, encourageant la quête de connaissances et la fascination pour l'inexploré.</p>
+                    <h2>Conclusion</h2>
+                    <p>Le "Bloop" demeure un mystère sous-marin fascinant, laissant derrière lui une symphonie d'interrogations et de spéculations. <br/>Alors que les scientifiques continuent d'étudier et de comprendre les mystères des océans, le "Bloop" demeure une énigme qui défie facilement les explications simples.<br/><br/> Peut-être que dans le futur, de nouvelles découvertes et avancées technologiques nous permettront de résoudre ce mystère sonore, dévoilant ainsi un chapitre de plus dans le livre des secrets océaniques.</p>
+                </div>
+                <div class="main__article__conclusion__content__images">
+                    <img class="image_4" src="/creatures/creature_4.jpg" alt="creature_4">
                 </div>
             </div>
         </div>
@@ -151,6 +108,143 @@ onMounted(async () => {
 
 </script>
 
-<style>
+<style lang="scss" scoped>
+
+.main{
+    color: white;
+    font-family: $montserrat, "sans-serif";
+
+    &__presentation{
+        background-image: 
+        url('/altered_creatures/creature_8_opacity.png'),
+        radial-gradient(20% 50% at 0% 20%, #05CBA569 0%, #073AFF00 100%),
+        radial-gradient(20% 50% at 100% 10%, #05CBA559 0%, #073AFF00 100%),
+        radial-gradient(20% 30% at 30% 1%, #8A4FFF4D 9%, #073AFF00 100%),
+        linear-gradient(320deg, #020015 42%, #291379FF 100%);
+        background-position: bottom;
+        background-size: 120%;
+        background-repeat: no-repeat;
+
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        padding: 130px 0px;
+
+        @include Article__title
+    }
+
+    &__article{
+        
+        &__conclusion, &__introduction{
+            padding: 100px;
+            background: $primary-color;
+
+            &__content{
+                display: flex;
+                align-content: center;
+                align-items: center;
+                gap: 100px;
+
+                &__images{
+                    position: relative;
+                    margin: auto;
+
+                    img{
+                        width: 100%;
+                        margin: auto;
+                        box-shadow: 0px 0px 50px $teal-color;
+                    }
+                }
+
+                &__texte{
+                    height: 100%;
+                    line-height: 1.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+
+                    h2{
+                        @include h2;
+                        line-height: 40px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        &__content{
+
+            background: $primary-color;
+
+            &__theory{
+                width: 100%;
+                padding: 100px;
+                margin-top: 100px;
+                background-size: 100%;
+                background-position: center;
+                background-image: 
+                    url('/altered_creatures/creature_9_opacity.png'),
+                    radial-gradient(50% 50% at -12% 40%, #00FFFF45 3%, #00031700 100%),
+                    radial-gradient(34% 46% at 107% 40%, #00FFFF3D 4%, #00031700 100%),
+                    radial-gradient(75% 75% at 50% 50%, #0B0D3AFF 0%, #080A1EFF 100%);
+                background-repeat: no-repeat;
+
+                
+                &__title{
+                    @include h2;
+                    text-align: center;
+                    margin-bottom: 100px;
+                }
+
+                &__texte{
+                    display: flex;
+                    justify-content: center;
+                    gap: 50px;
+                    line-height: 20px;
+
+                    p{
+                        width: 100%;
+                    }
+                }
+            }
+
+            &__discovery{
+                padding: 0px 50px;
+                border-top: 5px ;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                gap: 100px;
+
+                &__texte{
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column; 
+                    gap: 30px;
+
+                    h2{
+                        @include h2;
+                        text-align: center;
+                    }
+
+                    p{
+                        line-height: 1.2rem;
+                    }
+                }
+
+                img{
+                    width: 50%;
+                    margin: auto;
+                    box-shadow: 0px 0px 50px $teal-color;
+                }
+            }
+        }
+    }
+}
+
+img{
+    box-shadow: 0px 0px 50px $teal-color;
+}
 
 </style>
