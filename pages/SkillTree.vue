@@ -93,6 +93,8 @@ const getAchievement = async () => {
     const response = await API.get(`/achievements/${store.token}`);
     achievement.value = response.data
     const userAchievements = response.data.map((ach: { name: string }) => ach.name);
+
+    
     
     achievement.value.forEach((succes) =>{
         if(succes.name == "Triangle Des Bermudes"){
@@ -123,8 +125,6 @@ const getAchievement = async () => {
             store.achievement__9 = true;
         }
     })
-
-    
 
     Achievements.forEach((ach) => {
         if (ach.Name === "Départ") {
@@ -305,7 +305,7 @@ definePageMeta({
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .main{
     display: flex;
     width: 100vw;
