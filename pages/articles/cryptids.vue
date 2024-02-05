@@ -90,6 +90,7 @@
         </div>
     </div>
     <div v-else>NOPE</div>
+    <Comp_Footer/>
 </template>
 
 <script setup lang="ts">

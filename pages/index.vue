@@ -1,5 +1,5 @@
 <template>
-  
+    <Comp_Footer/>
 </template>
 
 <script>

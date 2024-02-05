@@ -2,26 +2,26 @@
   <Comp_Header class="header"></Comp_Header>
   <div v-if="store.achievement__5" class="main">
         <div class="main__presentation">
-            Le Bloop
+            Golf du Mexique, 'Dead Zone'
         </div>
         <div class="main__article">
             <div class="main__article__introduction">
                 <div class="main__article__introduction__content">
-                    <div class="main__article__introduction__content__texte">
-                        <h2>Les Mystères du "Bloop" : Un Son sous-marin Énigmatique</h2>
-                        <p>Les profondeurs de l'océan abritent une symphonie mystérieuse, un monde sonore caché qui défie parfois l'entendement humain. <br/><br/> Parmi les nombreux phénomènes énigmatiques, le "Bloop" se distingue comme l'un des mystères les plus captivants des abysses océaniques. <br/><br/>Dans cet article, nous plongerons dans l'histoire de ce son sous-marin mystérieux, explorant les théories et les spéculations qui entourent le "Bloop" et son impact sur la compréhension de notre monde océanique.</p>
-                    </div>
                     <div class="main__article__introduction__content__images">
-                        <img class="image_8" src="/creatures/creature_8.jpg" alt="creature_8">
+                        <img src="/images/dead_zone.jpg" alt="dead_zone">
+                    </div>
+                    <div class="main__article__introduction__content__texte">
+                        <h2>Les Mystères de la "Dead Zone" : Un Regard sur les Profondeurs Troublantes du Golfe du Mexique</h2>
+                        <p>Au cœur du Golfe du Mexique, une énigme écologique fascinante suscite l'inquiétude et l'intérêt des scientifiques : la "Dead Zone". <br/><br/>Cette zone dépourvue d'oxygène, où la vie marine semble anéantie, soulève des questions cruciales sur l'impact de l'activité humaine sur les écosystèmes marins.<br/><br/> Dans cet article, nous plongerons dans les méandres de la "Dead Zone", explorant ses origines, ses conséquences et les efforts déployés pour comprendre et atténuer ce phénomène troublant.</p>
                     </div>
                 </div>
             </div>
             <div class="main__article__content">
-                <div class="main__article__content__discovery">
-                    <img class="image_8" src="/creatures/bloop.jpg" alt="creature_8">
-                    <div class="main__article__content__discovery__texte">
-                        <h2>La découverte du "Bloop"</h2>
-                        <p>Le "Bloop" a été enregistré pour la première fois en 1997 par les hydrophones de l'Administration nationale océanique et atmosphérique (NOAA) près de l'Antarctique. <br/><br/> Ce son inhabituel, caractérisé par une amplitude extrêmement puissante, a captivé les scientifiques du monde entier.<br/> L'émission du "Bloop" a été détectée sur une large gamme de fréquences, défiant les caractéristiques typiques des sons émis par les baleines ou d'autres animaux marins.<br/><br/> Quelle que soit son origine, le "Bloop" a eu un impact significatif sur la manière dont nous percevons les mystères des profondeurs océaniques. <br/><br/>En suscitant l'imagination du public, il a renforcé l'intérêt pour l'exploration des abysses et la recherche de créatures inconnues. <br/><br/> Le mystère du "Bloop" rappelle que même à l'ère de la technologie avancée, les océans continuent de cacher des secrets intrigants, incitant les chercheurs à explorer davantage les mystères sous-marins.</p>
+                <div class="main__article__content__origines">
+                    <h2>La "Dead Zone" : Une Énigme Marine</h2>
+                    <div class="main__article__content__origines__texte">
+                        <p>Les origines de la "Dead Zone" remontent aux pratiques agricoles intensives dans le bassin versant du Mississippi.<br/><br/> Les engrais et les pesticides utilisés sur les terres agricoles finissent par se déverser dans le fleuve Mississippi, qui transporte ces substances nutritives excédentaires jusqu'au Golfe du Mexique.<br/><br/> Là, les eaux riches en nutriments créent un environnement propice à la prolifération d'algues, donnant naissance à la "Dead Zone" saisonnière. La "Dead Zone" du Golfe du Mexique est une zone où les niveaux d'oxygène sont si bas qu'ils ne peuvent plus soutenir la vie marine.<br/><br/> Cette situation alarmante est principalement attribuée à un excès d'éléments nutritifs, tels que l'azote et le phosphore, provenant des activités agricoles et industrielles.<br/><br/> Ces nutriments alimentent la croissance excessive d'algues, qui, lorsqu'elles meurent et se décomposent, épuisent l'oxygène de l'eau.</p>
+                        <img src="/images/map-dead_zone.png" alt="map-dead_zone">
                     </div>
                 </div>
                 <div class="main__article__content__theory">
@@ -68,6 +68,7 @@ const getAchievement = async () => {
     const response = await API.get(`/achievements/${store.token}`);
     achievement.value = response.data
     const userAchievements = response.data.map((ach: { name: string }) => ach.name);
+
     
     
     achievement.value.forEach((succes) =>{
@@ -116,13 +117,13 @@ onMounted(async () => {
 
     &__presentation{
         background-image: 
-        url('/altered_creatures/creature_8_opacity.png'),
+        url('/altered_pictures/dead_zone2_opacity.png'),
         radial-gradient(20% 50% at 0% 20%, #05CBA569 0%, #073AFF00 100%),
         radial-gradient(20% 50% at 100% 10%, #05CBA559 0%, #073AFF00 100%),
         radial-gradient(20% 30% at 30% 1%, #8A4FFF4D 9%, #073AFF00 100%),
         linear-gradient(320deg, #020015 42%, #291379FF 100%);
-        background-position: bottom;
-        background-size: 120%;
+        background-position: top right;
+        background-size: 100%;
         background-repeat: no-repeat;
 
         display: flex;
@@ -155,7 +156,7 @@ onMounted(async () => {
                     img{
                         width: 100%;
                         margin: auto;
-                        box-shadow: 0px 0px 50px $teal-color;
+                        @include PictureShadow
                     }
                 }
 
@@ -211,42 +212,35 @@ onMounted(async () => {
                 }
             }
 
-            &__discovery{
+            &__origines{
                 padding: 50px 100px 0px 100px;
-                border-top: 5px ;
-                display: flex;
-                align-content: center;
-                align-items: center;
                 gap: 100px;
 
-                &__texte{
-                    width: 70%;
-                    display: flex;
-                    flex-direction: column; 
-                    gap: 30px;
-
-                    h2{
-                        @include h2;
-                        text-align: center;
-                    }
-
-                    p{
-                        line-height: 1.2rem;
-                    }
+                h2{
+                    @include h2;
+                    text-align: center;
+                    margin-bottom: 50px;
                 }
 
-                img{
-                    width: 50%;
-                    margin: auto;
-                    box-shadow: 0px 0px 50px $teal-color;
+                &__texte{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    gap: 30px;
+
+                    img{
+                        width: 40%;
+                        margin: auto;
+                    }
                 }
             }
         }
     }
 }
 
-img{
-    box-shadow: 0px 0px 50px $teal-color;
+p{
+    @include Article_Text
 }
 
 </style>

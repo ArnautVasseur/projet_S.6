@@ -20,6 +20,7 @@
                     <ul>
                         <li><RouterLink to="/articles/bermudes">Triangle des Bermudes</RouterLink></li>
                         <li><RouterLink to="/articles/dragon">Triangle du Dragon</RouterLink></li>
+                        <li><RouterLink to="/articles/deadzone">La 'Dead Zone' du golf du Mexique</RouterLink></li>
                         <li><RouterLink to="/articles/marianatrench">Fosse Mariane</RouterLink></li>
                         <li><RouterLink to="/articles/bloop">The Bloop</RouterLink></li>
                         <li><RouterLink to="/articles/cryptids">Les Cryptides sous-marines</RouterLink></li>
