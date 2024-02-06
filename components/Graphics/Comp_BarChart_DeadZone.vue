@@ -19,7 +19,7 @@ import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, Li
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
-
+ChartJS.defaults.color = '#fff';
 
 export default {
   name: 'BarChart',
@@ -31,9 +31,7 @@ export default {
         datasets: [{
           label: 'Kilomètres carrés d\'hypoxie dans le golf du Mexique dans la \'Dead Zone\' mesuré en plein été',
           data: [9774, 9592, 6688, 40, 'nodata', 9420, 11920,	10804, 17520, 16680, 17220, 17920, 15950, 12480, 20000, 4400, 19840, 22000, 8320, 14640, 11800, 16560, 20480, 21764, 8240, 18400, 17680, 7480, 15120, 13080, 16760, 'nodata', 22720, 7040, 18000, 5480, 16400, 8480],
-          backgroundColor: [
-            '#233e82', '#475693', '#6670a5', '#848bb7', '#a2a6c9', '#c1c3db', '#e0e1ed', '#ffffff'
-          ],
+          backgroundColor: ['#233e82', '#475693', '#6670a5', '#848bb7', '#a2a6c9', '#c1c3db', '#e0e1ed', '#ffffff'],
           
         }],
       },

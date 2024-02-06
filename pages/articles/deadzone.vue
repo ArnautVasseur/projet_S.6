@@ -26,21 +26,36 @@
                 </div>
                 <div class="main__article__content__stat">
                     <Comp_BarChart_DeadZone/>
-                    <h3>La taille de la zone d'hypoxie des eaux de fond (oxygène dissous inférieur à 2 mg 1-1) pour 1985-2023 en kilomètres carrés.
-                        « nd » indique l'absence de données : une année sans zone entièrement cartographiée ou sans campagne estivale sur l'ensemble du plateau (1989 et 2016).
+                    <h3>La taille de la zone d'hypoxie des eaux de fond (oxygène dessous inférieur à 2 mg 1-1) pour 1985-2023 en kilomètres carrés. <br/>
+                        « nd » indique l'absence de données: une année sans zone entièrement cartographiée ou sans campagne estivale sur l'ensemble du plateau (1989 et 2016).
                         La superficie de 1988 est minime et n'est pas visible sur le graphique.</h3>
+                </div>
+                <div class="main__article__content__research">
+                    <div class="main__article__content__research__consequences">
+                        <div class="main__article__content__research__consequences__box">
+                            <p>La "Dead Zone" a des conséquences dramatiques sur la vie marine du Golfe du Mexique. <br/><br/>Les espèces qui dépendent de niveaux d'oxygène normaux sont contraintes de fuir la zone, tandis que celles qui ne peuvent pas s'en échapper peuvent périr. <br/><br/>Les pêcheurs constatent une diminution des captures dans la région touchée, et les écosystèmes marins sont perturbés. </p>
+                        </div>
+                        <p class="main__article__content__research__consequences__text">Cela soulève des préoccupations quant à la durabilité des ressources marines et à l'équilibre délicat des écosystèmes.<br/><br/> Des scientifiques du monde entier mènent des recherches approfondies pour comprendre les mécanismes de la "Dead Zone" et trouver des solutions durables.<br/><br/> Des équipes de recherche surveillent de près les niveaux d'oxygène, la croissance des algues, et les facteurs environnementaux qui contribuent à cette énigme écologique. <br/><br/>Les modèles informatiques sont utilisés pour prédire l'étendue et l'intensité de la "Dead Zone" chaque année.</p>
+                    </div>
+                    <div class="main__article__content__research__endeavor">
+                        <div class="main__article__content__research__endeavor__text">
+                            <p>Les efforts pour atténuer la "Dead Zone" se concentrent sur la réduction des déversements de nutriments dans le Mississippi. <br/><br/> Des pratiques agricoles durables, telles que la gestion efficace des engrais, sont encouragées pour minimiser les excès de nutriments.<br/><br/> Des réglementations environnementales visent également à contrôler les déversements industriels et les rejets urbains qui contribuent au problème. <br/><br/>Malgré ces initiatives, la résolution complète de la "Dead Zone" reste un défi complexe et continu.</p>
+                            <p>Les conséquences de la "Dead Zone" ne se limitent pas à l'environnement marin.<br/><br/> Les communautés côtières qui dépendent de la pêche subissent des pertes économiques, et les industries liées au tourisme peuvent être touchées par la mauvaise qualité de l'eau.<br/><br/> La lutte contre la "Dead Zone" implique donc non seulement des efforts scientifiques, mais aussi une sensibilisation du public et des actions coordonnées pour réduire l'empreinte humaine sur les écosystèmes marins.</p>
+                        </div>
+                        <img src="/images/explanation-dead_zone.png" alt="">
+                    </div>
                 </div>
             </div>
             
         </div>
         <div class="main__article__conclusion">
             <div class="main__article__conclusion__content">
+                <div class="main__article__conclusion__content__images">
+                    <img class="image_4" src="/creatures/creature_12.jpg" alt="creature_4">
+                </div>
                 <div class="main__article__conclusion__content__texte">
                     <h2>Conclusion</h2>
-                    <p>Le "Bloop" demeure un mystère sous-marin fascinant, laissant derrière lui une symphonie d'interrogations et de spéculations. <br/>Alors que les scientifiques continuent d'étudier et de comprendre les mystères des océans, le "Bloop" demeure une énigme qui défie facilement les explications simples.<br/><br/> Peut-être que dans le futur, de nouvelles découvertes et avancées technologiques nous permettront de résoudre ce mystère sonore, dévoilant ainsi un chapitre de plus dans le livre des secrets océaniques.</p>
-                </div>
-                <div class="main__article__conclusion__content__images">
-                    <img class="image_4" src="/creatures/creature_4.jpg" alt="creature_4">
+                    <p>La "Dead Zone" du Golfe du Mexique demeure un mystère écologique complexe, témoignant des ramifications de l'activité humaine sur les océans.<br/><br/> Alors que les scientifiques poursuivent leurs efforts pour comprendre et atténuer ce phénomène, la "Dead Zone" rappelle l'importance cruciale de préserver nos écosystèmes marins.<br/><br/> En équilibrant les besoins humains avec la conservation de la vie marine, nous pouvons espérer restaurer la santé des océans et préserver la diversité biologique pour les générations futures.</p>
                 </div>
             </div>
         </div>
@@ -179,12 +194,12 @@ onMounted(async () => {
 
             &__stat{
                 width: 100%;
-                padding: 150px;
+                padding: 180px;
                 margin-top: 100px;
                 background-size: 100%;
                 background-position: center;
                 background-image: 
-                    url('/altered_creatures/creature_9_opacity.png'),
+                    url('/altered_creatures/creature_14_opacity.png'),
                     radial-gradient(50% 50% at -12% 40%, #00FFFF45 3%, #00031700 100%),
                     radial-gradient(34% 46% at 107% 40%, #00FFFF3D 4%, #00031700 100%),
                     radial-gradient(75% 75% at 50% 50%, #0B0D3AFF 0%, #080A1EFF 100%);
@@ -194,6 +209,7 @@ onMounted(async () => {
                     line-height: 35px;
                     font-size: $desktop-large;
                     text-align: center;
+                    margin-top: 40px;
                 }
             }
 
@@ -217,6 +233,52 @@ onMounted(async () => {
                     img{
                         width: 40%;
                         margin: auto;
+                    }
+                }
+            }
+
+            &__research{
+                width: 100%;
+                height: 100%;
+                padding: 100px;
+
+                &__text{
+                    margin-top: 50px;
+                }
+
+                &__consequences{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    gap: 50px;
+
+                    &__text{
+                        width: 70%; 
+                    }
+                    
+                    &__box{
+                        width: 50%;
+                        text-align: center;
+                        background: $light_blue-color;
+                        padding: 20px 60px;
+                        box-shadow: 0px 0px 30px $teal-color;
+                    }
+                }
+
+                &__endeavor{
+                    margin-top: 100px;
+                    display: flex;
+                    align-items: center;
+                    gap: 50px;
+
+                    p:first-child{
+                        margin-bottom: 30px;
+                    }
+
+                    img{
+                        width: 40%;
+                        @include PictureShadow;
                     }
                 }
             }
