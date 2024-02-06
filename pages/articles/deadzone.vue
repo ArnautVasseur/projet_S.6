@@ -11,8 +11,8 @@
                         <img src="/images/dead_zone.jpg" alt="dead_zone">
                     </div>
                     <div class="main__article__introduction__content__texte">
-                        <h2>Les Mystères de la "Dead Zone" : Un Regard sur les Profondeurs Troublantes du Golfe du Mexique</h2>
-                        <p>Au cœur du Golfe du Mexique, une énigme écologique fascinante suscite l'inquiétude et l'intérêt des scientifiques : la "Dead Zone". <br/><br/>Cette zone dépourvue d'oxygène, où la vie marine semble anéantie, soulève des questions cruciales sur l'impact de l'activité humaine sur les écosystèmes marins.<br/><br/> Dans cet article, nous plongerons dans les méandres de la "Dead Zone", explorant ses origines, ses conséquences et les efforts déployés pour comprendre et atténuer ce phénomène troublant.</p>
+                        <h2>Les Mystères de la "Dead Zone" : Un Regard sur les Profondeurs Troublantes du golf du Mexique</h2>
+                        <p>Au cœur du golf du Mexique, une énigme écologique fascinante suscite l'inquiétude et l'intérêt des scientifiques : la "Dead Zone". <br/><br/>Cette zone dépourvue d'oxygène, où la vie marine semble anéantie, soulève des questions cruciales sur l'impact de l'activité humaine sur les écosystèmes marins.<br/><br/> Dans cet article, nous plongerons dans les méandres de la "Dead Zone", explorant ses origines, ses conséquences et les efforts déployés pour comprendre et atténuer ce phénomène troublant.</p>
                     </div>
                 </div>
             </div>
@@ -20,16 +20,15 @@
                 <div class="main__article__content__origines">
                     <h2>La "Dead Zone" : Une Énigme Marine</h2>
                     <div class="main__article__content__origines__texte">
-                        <p>Les origines de la "Dead Zone" remontent aux pratiques agricoles intensives dans le bassin versant du Mississippi.<br/><br/> Les engrais et les pesticides utilisés sur les terres agricoles finissent par se déverser dans le fleuve Mississippi, qui transporte ces substances nutritives excédentaires jusqu'au Golfe du Mexique.<br/><br/> Là, les eaux riches en nutriments créent un environnement propice à la prolifération d'algues, donnant naissance à la "Dead Zone" saisonnière. La "Dead Zone" du Golfe du Mexique est une zone où les niveaux d'oxygène sont si bas qu'ils ne peuvent plus soutenir la vie marine.<br/><br/> Cette situation alarmante est principalement attribuée à un excès d'éléments nutritifs, tels que l'azote et le phosphore, provenant des activités agricoles et industrielles.<br/><br/> Ces nutriments alimentent la croissance excessive d'algues, qui, lorsqu'elles meurent et se décomposent, épuisent l'oxygène de l'eau.</p>
+                        <p>Les origines de la "Dead Zone" remontent aux pratiques agricoles intensives dans le bassin versant du Mississippi.<br/><br/> Les engrais et les pesticides utilisés sur les terres agricoles finissent par se déverser dans le fleuve Mississippi, qui transporte ces substances nutritives excédentaires jusqu'au golf du Mexique.<br/><br/> Là, les eaux riches en nutriments créent un environnement propice à la prolifération d'algues, donnant naissance à la "Dead Zone" saisonnière. La "Dead Zone" du golf du Mexique est une zone où les niveaux d'oxygène sont si bas qu'ils ne peuvent plus soutenir la vie marine.<br/><br/> Cette situation alarmante est principalement attribuée à un excès d'éléments nutritifs, tels que l'azote et le phosphore, provenant des activités agricoles et industrielles.<br/><br/> Ces nutriments alimentent la croissance excessive d'algues, qui, lorsqu'elles meurent et se décomposent, épuisent l'oxygène de l'eau.</p>
                         <img src="/images/map-dead_zone.png" alt="map-dead_zone">
                     </div>
                 </div>
-                <div class="main__article__content__theory">
-                    <h2 class="main__article__content__theory__title">Théories et Spéculations</h2>
-                    <div class="main__article__content__theory__texte">
-                        <p>Les spéculations sur l'origine du "Bloop" sont variées et parfois fantaisistes.<br/> L'une des premières théories avancées suggérait qu'il pouvait provenir d'une créature marine inconnue, peut-être même d'une espèce gigantesque cachée dans les profondeurs.<br/><br/> Cependant, la communauté scientifique a rapidement écarté cette idée, soulignant que la fréquence et le volume du son étaient incompatibles avec les caractéristiques biologiques connues.</p>
-                        <p>Une explication plus plausible est venue des scientifiques de la NOAA, qui ont conclu que le "Bloop" était probablement d'origine glaciaire. <br/><br/>Selon cette théorie, le son pourrait résulter du craquement des icebergs en train de se détacher et de s'effondrer dans l'océan.<br/><br/> Bien que cette explication ait apaisé une partie des mystères entourant le "Bloop," certains sceptiques ont continué à émettre des doutes, arguant que la puissance du son dépassait de loin ce qui était attendu pour un phénomène glaciaire.</p>
-                    </div>
+                <div class="main__article__content__stat">
+                    <Comp_BarChart_DeadZone/>
+                    <h3>La taille de la zone d'hypoxie des eaux de fond (oxygène dissous inférieur à 2 mg 1-1) pour 1985-2023 en kilomètres carrés.
+                        « nd » indique l'absence de données : une année sans zone entièrement cartographiée ou sans campagne estivale sur l'ensemble du plateau (1989 et 2016).
+                        La superficie de 1988 est minime et n'est pas visible sur le graphique.</h3>
                 </div>
             </div>
             
@@ -51,8 +50,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { onMounted } from 'vue';
 const store = useGlobalStore()
 
 //renvoie l'user sur l'index s'il n'est pas connecté
@@ -71,7 +68,7 @@ const getAchievement = async () => {
 
     
     
-    achievement.value.forEach((succes) =>{
+    achievement.value.forEach((succes: { name: string; }) =>{
         if(succes.name == "Triangle Des Bermudes"){
             store.achievement__1 = true;
         }
@@ -180,9 +177,9 @@ onMounted(async () => {
             background: $primary-color;
             padding-top: 50px;
 
-            &__theory{
+            &__stat{
                 width: 100%;
-                padding: 100px;
+                padding: 150px;
                 margin-top: 100px;
                 background-size: 100%;
                 background-position: center;
@@ -193,22 +190,10 @@ onMounted(async () => {
                     radial-gradient(75% 75% at 50% 50%, #0B0D3AFF 0%, #080A1EFF 100%);
                 background-repeat: no-repeat;
 
-                
-                &__title{
-                    @include h2;
+                h3{
+                    line-height: 35px;
+                    font-size: $desktop-large;
                     text-align: center;
-                    margin-bottom: 100px;
-                }
-
-                &__texte{
-                    display: flex;
-                    justify-content: center;
-                    gap: 50px;
-                    line-height: 20px;
-
-                    p{
-                        width: 100%;
-                    }
                 }
             }
 

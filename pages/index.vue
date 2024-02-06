@@ -1,5 +1,5 @@
 <template>
-    <Comp_Footer/>
+    <Comp_BarChart_DeadZone/>
 </template>
 
 <script>
