@@ -51,8 +51,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { onMounted } from 'vue';
 const store = useGlobalStore()
 
 //renvoie l'user sur l'index s'il n'est pas connecté
@@ -70,7 +68,7 @@ const getAchievement = async () => {
     const userAchievements = response.data.map((ach: { name: string }) => ach.name);
     
     
-    achievement.value.forEach((succes) =>{
+    achievement.value.forEach((succes: { name: string; }) =>{
         if(succes.name == "Triangle Des Bermudes"){
             store.achievement__1 = true;
         }
@@ -231,7 +229,7 @@ onMounted(async () => {
                     }
 
                     p{
-                        line-height: 1.2rem;
+                        line-height: 1.5rem;
                     }
                 }
 
