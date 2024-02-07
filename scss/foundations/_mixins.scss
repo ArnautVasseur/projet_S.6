@@ -7,7 +7,7 @@
     position: absolute;
 }
 
-@mixin Article__title{
+@mixin Article_Title{
     font-size: $desktop_article_title;
     font-weight: 600;
     letter-spacing: 2px;

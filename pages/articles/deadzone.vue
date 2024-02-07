@@ -144,7 +144,7 @@ onMounted(async () => {
         align-items: center;
         padding: 130px 0px;
 
-        @include Article__title
+        @include Article_Title;
     }
 
     &__article{
@@ -168,7 +168,7 @@ onMounted(async () => {
                     img{
                         width: 100%;
                         margin: auto;
-                        @include PictureShadow
+                        @include PictureShadow;
                     }
                 }
 
@@ -287,7 +287,7 @@ onMounted(async () => {
 }
 
 p{
-    @include Article_Text
+    @include Article_Text;
 }
 
 </style>

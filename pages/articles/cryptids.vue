@@ -166,7 +166,7 @@ onMounted(async () => {
         align-items: center;
         padding: 130px 0px;
 
-        @include Article__title
+        @include Article_Title;
     }
 
     &__article{
@@ -203,6 +203,7 @@ onMounted(async () => {
             gap: 50px;
             padding: 100px;
             background: $primary-color;
+            border-bottom: 5px solid $teal-color;
 
             h2{
                 margin-bottom: 50px;

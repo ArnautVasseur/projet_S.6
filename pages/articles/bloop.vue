@@ -129,7 +129,7 @@ onMounted(async () => {
         align-items: center;
         padding: 130px 0px;
 
-        @include Article__title
+        @include Article_Title
     }
 
     &__article{

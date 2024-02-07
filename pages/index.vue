@@ -1,5 +1,5 @@
 <template>
-    <Comp_BarChart_DeadZone/>
+    <Comp_Slider/>
 </template>
 
 <script>
