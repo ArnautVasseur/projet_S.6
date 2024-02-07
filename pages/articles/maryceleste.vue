@@ -1,11 +1,66 @@
 <template>
   <Comp_Header class="header"></Comp_Header>
+  <div v-if="store.achievement__5" class="main">
+        <div class="main__presentation">
+            Mary Celeste
+        </div>
+        <div class="main__article">
+            <div class="main__article__introduction">
+                <div class="main__article__introduction__content">
+                    <div class="main__article__introduction__content__texte">
+                        <h2>Le Mystère de Mary Celeste : Un Navire Abandonné</h2>
+                        <p>L'histoire maritime regorge de mystères, mais aucun n'a captivé l'imagination du public autant que le cas de Mary Celeste.<br/><br/> Ce navire, découvert abandonné en mer en 1872, continue de susciter des spéculations sur les circonstances entourant son mystérieux voyage sans équipage.<br/><br/> Dans cet article, nous plongerons dans l'énigme de Mary Celeste, explorant les faits connus, les théories émergentes et les questions irrésolues qui persistent.</p>
+                    </div>
+                    <div class="main__article__introduction__content__images">
+                        <img src="/images/MaryCeleste.jpg" alt="MaryCeleste">
+                    </div>
+                </div>
+            </div>
+            <div class="main__article__content">
+
+                <div class="main__article__content__discovery">
+                    <img src="/images/MaryCeleste3.jpg" alt="MaryCeleste2">
+                    <div class="main__article__content__discovery__texte">
+                        <h2>Un Navire Fantôme</h2>
+                        <p>Mary Celeste, un brick-goélette américain, a été découvert dérivant sans équipage dans l'Atlantique le 4 décembre 1872.<br/><br/> Le navire était en bon état de navigation, mais son équipage, y compris le capitaine Benjamin Briggs, sa famille et l'équipage, avait mystérieusement disparu.<br/><br/> Aucune trace de lutte ni de signe de violence n'a été constatée à bord.<br/><br/> Le voyage de Mary Celeste avait débuté à New York avec une cargaison d'alcool industriel à destination de l'Italie.<br/><br/> À l'exception de quelques dégâts mineurs causés par une tempête, le navire était en bon état lors de sa découverte.<br/><br/> La cargaison était intacte, et les effets personnels des passagers étaient en place. Le dernier journal de bord daté du 25 novembre ne révélait rien d'anormal.</p>
+                    </div>
+                </div>
+
+                <div class="main__article__content__theory">
+                    <h2 class="main__article__content__theory__title">Théories et Spéculations</h2>
+                    <div class="main__article__content__theory__texte">
+                        <p>Les théories sur la disparition de l'équipage de Mary Celeste sont nombreuses.<br/><br/> Certains suggèrent une mutinerie, des attaques de pirates ou des rencontres avec des créatures marines mystérieuses.<br/><br/> Cependant, aucune de ces spéculations n'est étayée par des preuves solides.<br/><br/> Les experts estiment que des facteurs plus probables, tels que des fuites de gaz ou des inquiétudes liées à la cargaison inflammable, pourraient avoir conduit l'équipage à abandonner le navire de manière précipitée.</p>
+                        <p>Plusieurs aspects de l'affaire Mary Celeste restent inexpliqués.<br/><br/> Pourquoi l'équipage aurait-il quitté un navire en bon état de fonctionnement et sans danger immédiat ?<br/><br/> Pourquoi les secours maritimes de Dei Gratia, le navire qui a découvert Mary Celeste, n'ont-ils pas été en mesure de rattraper le brick-goélette alors qu'ils naviguaient dans les mêmes eaux pendant plusieurs jours ?</p>
+                    </div>
+                </div>
+
+                <div class="main__article__content__history">
+                    <div class="main__article__content__history__texte">
+                        <p>L'histoire de Mary Celeste a eu un impact significatif sur l'imagination populaire.<br/><br/> Elle a inspiré de nombreux romans, films et théories du complot.<br/><br/>Les spéculations sur des événements paranormaux ou surnaturels ont persisté au fil des ans, bien que la réalité des faits connus suggère des explications plus rationnelles.<br/><br/> Mary Celeste demeure un mystère maritime fascinant, un navire qui semble résister à une explication définitive.<br/><br/> Malgré les recherches et les enquêtes, les circonstances exactes de la disparition de son équipage restent voilées de mystère.<br/><br/> Les fonds marins gardent jalousement les secrets de Mary Celeste, suscitant à la fois fascination et frustration parmi ceux qui cherchent à comprendre son histoire.</p>
+                    </div>
+                    <img src="/images/MaryCeleste4.avif" alt="MaryCeleste4">
+                </div>
+
+            </div>
+            
+        </div>
+        <div class="main__article__conclusion">
+            <div class="main__article__conclusion__content">
+                <div class="main__article__conclusion__content__images">
+                    <img src="/creatures/creature_2.jpg" alt="creature_7">
+                </div>
+                <div class="main__article__conclusion__content__texte">
+                    <h2>Conclusion</h2>
+                    <p>Le mystère de Mary Celeste demeure l'une des énigmes les plus célèbres de l'histoire maritime.<br/><br/> Alors que les chercheurs continuent de débattre des théories et des explications, le navire fantôme reste un symbole éternel de l'inexpliqué en haute mer.<br/><br/> Mary Celeste, avec son histoire intrigante, continue d'inviter les esprits curieux à imaginer les scénarios possibles qui ont pu se dérouler à bord de ce navire abandonné aux portes de l'inconnu.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div v-else>NOPE</div>
+    <Comp_Footer/>
 </template>
 
 <script setup lang="ts">
-
-import { ref } from 'vue';
-import { onMounted } from 'vue';
 const store = useGlobalStore()
 
 //renvoie l'user sur l'index s'il n'est pas connecté
@@ -21,10 +76,9 @@ const getAchievement = async () => {
     const response = await API.get(`/achievements/${store.token}`);
     achievement.value = response.data
     const userAchievements = response.data.map((ach: { name: string }) => ach.name);
-
     
     
-    achievement.value.forEach((succes) =>{
+    achievement.value.forEach((succes: { name: string; }) =>{
         if(succes.name == "Triangle Des Bermudes"){
             store.achievement__1 = true;
         }
@@ -62,6 +116,176 @@ onMounted(async () => {
 
 </script>
 
-<style>
+<style lang="scss" scoped>
+
+.main{
+    color: white;
+    font-family: $montserrat, "sans-serif";
+
+    &__presentation{
+        background-image: 
+        url('/altered_creatures/creature_7_opacity.png'),
+        radial-gradient(20% 50% at 0% 20%, #05CBA569 0%, #073AFF00 100%),
+        radial-gradient(20% 50% at 100% 10%, #05CBA559 0%, #073AFF00 100%),
+        radial-gradient(20% 30% at 30% 1%, #8A4FFF4D 9%, #073AFF00 100%),
+        linear-gradient(320deg, #020015 42%, #291379FF 100%);
+        background-position: bottom right;
+        background-size: 120%;
+        background-repeat: no-repeat;
+
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        padding: 130px 0px;
+
+        @include Article_Title
+    }
+
+    &__article{
+        
+        &__conclusion, &__introduction{
+            padding: 100px;
+            background-size: 100% 100%;
+            background-position: 0px 0px,0px 0px,0px 0px;
+            background-image: radial-gradient(50% 50% at -12% 40%, #00FFFF45 3%, #00031700 100%),radial-gradient(34% 46% at 107% 40%, #00FFFF3D 4%, #00031700 100%),radial-gradient(75% 75% at 50% 50%, #0B0D3AFF 0%, #080A1EFF 100%);
+
+            &__content{
+                display: flex;
+                align-content: center;
+                align-items: center;
+                gap: 100px;
+
+                &__images{
+                    position: relative;
+                    margin: auto;
+
+                    img{
+                        width: 100%;
+                        margin: auto;
+                        box-shadow: 0px 0px 50px $teal-color;
+                    }
+                }
+
+                &__texte{
+                    height: 100%;
+                    line-height: 1.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+
+                    h2{
+                        @include h2;
+                        line-height: 40px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        &__content{
+            background: $primary-color;
+            padding-top: 50px;
+
+            &__theory{
+                width: 100%;
+                padding: 100px;
+                margin-top: 100px;
+                background-size: 100%;
+                background-position: center;
+                background-image: 
+                    url('/altered_pictures/MaryCeleste2_opacity.png'),
+                    radial-gradient(50% 50% at -12% 40%, #00FFFF45 3%, #00031700 100%),
+                    radial-gradient(34% 46% at 107% 40%, #00FFFF3D 4%, #00031700 100%),
+                    radial-gradient(75% 75% at 50% 50%, #0B0D3AFF 0%, #080A1EFF 100%);
+                background-repeat: no-repeat;
+
+                
+                &__title{
+                    @include h2;
+                    text-align: center;
+                    margin-bottom: 100px;
+                }
+
+                &__texte{
+                    display: flex;
+                    justify-content: center;
+                    gap: 50px;
+                    line-height: 20px;
+
+                    p{
+                        width: 100%;
+                    }
+                }
+            }
+
+            &__discovery{
+                padding: 50px 100px 0px 100px;
+                border-top: 5px ;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                gap: 100px;
+
+                &__texte{
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column; 
+                    gap: 30px;
+
+                    h2{
+                        @include h2;
+                        text-align: center;
+                    }
+
+                    p{
+                        line-height: 1.5rem;
+                    }
+                }
+
+                img{
+                    width: 50%;
+                    margin: auto;
+                    box-shadow: 0px 0px 50px $teal-color;
+                }
+            }
+
+            &__history{
+                padding: 100px;
+                border-top: 5px ;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                gap: 100px;
+
+                &__texte{
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column; 
+                    gap: 30px;
+
+                    h2{
+                        @include h2;
+                        text-align: center;
+                    }
+
+                    p{
+                        line-height: 1.5rem;
+                    }
+                }
+
+                img{
+                    width: 50%;
+                    margin: auto;
+                    box-shadow: 0px 0px 50px $teal-color;
+                }
+            }
+        }
+    }
+}
+
+img{
+    box-shadow: 0px 0px 50px $teal-color;
+}
 
 </style>
