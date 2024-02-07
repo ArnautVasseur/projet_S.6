@@ -1,5 +1,5 @@
 <template>
-    <Comp_Slider/>
+    
 </template>
 
 <script>

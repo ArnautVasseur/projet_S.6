@@ -232,29 +232,29 @@ onMounted(async () => {
             padding: 100px;
 
             &__box{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 50px;
-            margin: 100px 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+                margin: 100px 0px;
 
-            &__texte{
-            width: 50%;
-            @include Article_Text;
-            
+                &__texte{
+                width: 50%;
+                @include Article_Text;
+                
 
-                h2{
-                    width: 100%;
-                    margin-bottom: 50px;
-                    @include h2;
-                    text-align: center;
+                    h2{
+                        width: 100%;
+                        margin-bottom: 50px;
+                        @include h2;
+                        text-align: center;
+                    }
+                }
+
+                img{
+                    width: 50%;
                 }
             }
-
-            img{
-                width: 50%;
-            }
-        }
 
         }
     }
