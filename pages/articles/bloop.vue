@@ -8,8 +8,8 @@
             <div class="main__article__introduction">
                 <div class="main__article__introduction__content">
                     <div class="main__article__introduction__content__texte">
-                        <h2>Les Mystères du "Bloop" : Un Son sous-marin Énigmatique</h2>
-                        <p>Les profondeurs de l'océan abritent une symphonie mystérieuse, un monde sonore caché qui défie parfois l'entendement humain. <br/><br/> Parmi les nombreux phénomènes énigmatiques, le "Bloop" se distingue comme l'un des mystères les plus captivants des abysses océaniques. <br/><br/>Dans cet article, nous plongerons dans l'histoire de ce son sous-marin mystérieux, explorant les théories et les spéculations qui entourent le "Bloop" et son impact sur la compréhension de notre monde océanique.</p>
+                        <h2><span class="span_article">Les Mystères du "Bloop" : Un Son sous-marin Énigmatique</span></h2>
+                        <p>Les profondeurs de l'océan abritent une <span class="span_article">symphonie mystérieuse</span>, un monde sonore caché qui défie parfois l'entendement humain. <br/><br/> Parmi les nombreux phénomènes <span class="span_article">énigmatiques</span>, le <span class="span_article">"Bloop"</span> se distingue comme l'un des mystères les plus <span class="span_article">captivants</span> des abysses océaniques. <br/><br/>Dans cet article, nous plongerons dans l'histoire de ce son sous-marin <span class="span_article">mystérieux</span>, explorant les théories et les spéculations qui entourent le "Bloop" et son impact sur la compréhension de notre monde océanique.</p>
                     </div>
                     <div class="main__article__introduction__content__images">
                         <img class="image_8" src="/creatures/creature_8.jpg" alt="creature_8">
@@ -20,15 +20,15 @@
                 <div class="main__article__content__discovery">
                     <img class="image_8" src="/creatures/bloop.jpg" alt="creature_8">
                     <div class="main__article__content__discovery__texte">
-                        <h2>La découverte du "Bloop"</h2>
-                        <p>Le "Bloop" a été enregistré pour la première fois en 1997 par les hydrophones de l'Administration nationale océanique et atmosphérique (NOAA) près de l'Antarctique. <br/><br/> Ce son inhabituel, caractérisé par une amplitude extrêmement puissante, a captivé les scientifiques du monde entier.<br/> L'émission du "Bloop" a été détectée sur une large gamme de fréquences, défiant les caractéristiques typiques des sons émis par les baleines ou d'autres animaux marins.<br/><br/> Quelle que soit son origine, le "Bloop" a eu un impact significatif sur la manière dont nous percevons les mystères des profondeurs océaniques. <br/><br/>En suscitant l'imagination du public, il a renforcé l'intérêt pour l'exploration des abysses et la recherche de créatures inconnues. <br/><br/> Le mystère du "Bloop" rappelle que même à l'ère de la technologie avancée, les océans continuent de cacher des secrets intrigants, incitant les chercheurs à explorer davantage les mystères sous-marins.</p>
+                        <h2><span class="span_article">La découverte du "Bloop"</span></h2>
+                        <p>Le <span class="span_article">"Bloop"</span> a été enregistré pour la première fois en <span class="span_article">1997</span> par les hydrophones de l'Administration nationale océanique et atmosphérique (NOAA) <span class="span_article">près de l'Antarctique</span>. <br/><br/> Ce son inhabituel, caractérisé par une amplitude <span class="span_article">extrêmement</span> puissante, a captivé les scientifiques du monde entier.<br/> L'émission du <span class="span_article">"Bloop"</span> a été détectée sur une large gamme de fréquences, défiant les caractéristiques typiques des sons émis par les baleines ou d'autres animaux marins.<br/><br/> Quelle que soit son origine, le <span class="span_article">"Bloop"</span> a eu un impact significatif sur la manière dont nous percevons les <span class="span_article">mystères des profondeurs océaniques</span>. <br/><br/>En suscitant l'imagination du public, il a renforcé l'intérêt pour <span class="span_article">l'exploration des abysses</span> et la recherche de <span class="span_article">créatures inconnues</span>. <br/><br/> Le mystère du <span class="span_article">"Bloop"</span> rappelle que même à l'ère de la technologie avancée, les océans continuent de cacher des secrets <span class="span_article">intrigants</span>, incitant les chercheurs à explorer davantage les mystères sous-marins.</p>
                     </div>
                 </div>
                 <div class="main__article__content__theory">
-                    <h2 class="main__article__content__theory__title">Théories et Spéculations</h2>
+                    <h2 class="main__article__content__theory__title"><span class="span_article">Théories et Spéculations</span></h2>
                     <div class="main__article__content__theory__texte">
-                        <p>Les spéculations sur l'origine du "Bloop" sont variées et parfois fantaisistes.<br/> L'une des premières théories avancées suggérait qu'il pouvait provenir d'une créature marine inconnue, peut-être même d'une espèce gigantesque cachée dans les profondeurs.<br/><br/> Cependant, la communauté scientifique a rapidement écarté cette idée, soulignant que la fréquence et le volume du son étaient incompatibles avec les caractéristiques biologiques connues.</p>
-                        <p>Une explication plus plausible est venue des scientifiques de la NOAA, qui ont conclu que le "Bloop" était probablement d'origine glaciaire. <br/><br/>Selon cette théorie, le son pourrait résulter du craquement des icebergs en train de se détacher et de s'effondrer dans l'océan.<br/><br/> Bien que cette explication ait apaisé une partie des mystères entourant le "Bloop," certains sceptiques ont continué à émettre des doutes, arguant que la puissance du son dépassait de loin ce qui était attendu pour un phénomène glaciaire.</p>
+                        <p>Les spéculations sur l'origine du <span class="span_article">"Bloop"</span> sont variées et parfois <span class="span_article">fantaisistes</span>.<br/> L'une des premières théories avancées suggérait qu'il pouvait provenir d'une <span class="span_article">créature marine inconnue</span>, peut-être même d'une <span class="span_article">espèce gigantesque</span> cachée dans les profondeurs.<br/><br/> Cependant, la communauté scientifique a rapidement écarté cette idée, soulignant que la fréquence et le volume du son étaient <span class="span_article">incompatibles</span> avec les caractéristiques biologiques connues.</p>
+                        <p>Une explication plus plausible est venue des scientifiques de la NOAA, qui ont conclu que le <span class="span_article">"Bloop"</span> était probablement d'origine <span class="span_article">glaciaire</span>. <br/><br/>Selon cette théorie, le son pourrait résulter du <span class="span_article">craquement des icebergs</span> en train de se détacher et de s'effondrer dans l'océan.<br/><br/> Bien que cette explication ait apaisé une partie des mystères entourant le <span class="span_article">"Bloop"</span>, certains sceptiques ont continué à émettre des doutes, arguant que la puissance du son <span class="span_article">dépassait de loin</span> ce qui était attendu pour un phénomène glaciaire.</p>
                     </div>
                 </div>
             </div>
@@ -37,8 +37,8 @@
         <div class="main__article__conclusion">
             <div class="main__article__conclusion__content">
                 <div class="main__article__conclusion__content__texte">
-                    <h2>Conclusion</h2>
-                    <p>Le "Bloop" demeure un mystère sous-marin fascinant, laissant derrière lui une symphonie d'interrogations et de spéculations. <br/>Alors que les scientifiques continuent d'étudier et de comprendre les mystères des océans, le "Bloop" demeure une énigme qui défie facilement les explications simples.<br/><br/> Peut-être que dans le futur, de nouvelles découvertes et avancées technologiques nous permettront de résoudre ce mystère sonore, dévoilant ainsi un chapitre de plus dans le livre des secrets océaniques.</p>
+                    <h2><span class="span_article">Conclusion</span></h2>
+                    <p>Le <span class="span_article">"Bloop"</span> demeure un mystère sous-marin fascinant, laissant derrière lui une symphonie <span class="span_article">d'interrogations et de spéculations</span>. <br/>Alors que les scientifiques continuent d'étudier et de comprendre les mystères des océans, le <span class="span_article">"Bloop"</span> demeure une énigme qui défie facilement les explications simples.<br/><br/> Peut-être que dans le futur, de nouvelles découvertes et avancées technologiques nous permettront de résoudre ce <span class="span_article">mystère sonore</span>, dévoilant ainsi un chapitre de plus dans le livre des <span class="span_article">secrets océaniques</span>.</p>
                 </div>
                 <div class="main__article__conclusion__content__images">
                     <img class="image_4" src="/creatures/creature_4.jpg" alt="creature_4">
@@ -245,6 +245,10 @@ onMounted(async () => {
 
 img{
     box-shadow: 0px 0px 50px $teal-color;
+}
+
+.span_article{
+    @include Article_Important;
 }
 
 </style>
