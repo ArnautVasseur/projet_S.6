@@ -11,16 +11,16 @@
                         <img src="/images/dead_zone.jpg" alt="dead_zone">
                     </div>
                     <div class="main__article__introduction__content__texte">
-                        <h2>Les Mystères de la "Dead Zone" : Un Regard sur les Profondeurs Troublantes du golf du Mexique</h2>
-                        <p>Au cœur du golf du Mexique, une énigme écologique fascinante suscite l'inquiétude et l'intérêt des scientifiques : la "Dead Zone". <br/><br/>Cette zone dépourvue d'oxygène, où la vie marine semble anéantie, soulève des questions cruciales sur l'impact de l'activité humaine sur les écosystèmes marins.<br/><br/> Dans cet article, nous plongerons dans les méandres de la "Dead Zone", explorant ses origines, ses conséquences et les efforts déployés pour comprendre et atténuer ce phénomène troublant.</p>
+                        <h2><span class="span_article">Les Mystères de la "Dead Zone" : Un Regard sur les Profondeurs Troublantes du golf du Mexique</span></h2>
+                        <p>Au cœur du <span class="span_article">golf du Mexique</span>, une énigme écologique <span class="span_article">fascinante</span> suscite l'inquiétude et l'intérêt des scientifiques : la <span class="span_article">"Dead Zone"</span>. <br/><br/>Cette zone dépourvue d'oxygène, où la vie marine semble <span class="span_article">anéantie</span>, soulève des questions <span class="span_article">cruciales</span> sur l'impact de l'activité humaine sur les écosystèmes marins.<br/><br/> Dans cet article, nous plongerons dans les méandres de la <span class="span_article">"Dead Zone"</span>, explorant ses <span class="span_article">origines</span>, ses <span class="span_article">conséquences</span> et les <span class="span_article">efforts déployés</span> pour comprendre et atténuer ce phénomène troublant.</p>
                     </div>
                 </div>
             </div>
             <div class="main__article__content">
                 <div class="main__article__content__origines">
-                    <h2>La "Dead Zone" : Une Énigme Marine</h2>
+                    <h2><span class="span_article">La "Dead Zone" : Une Énigme Marine</span></h2>
                     <div class="main__article__content__origines__texte">
-                        <p>Les origines de la "Dead Zone" remontent aux pratiques agricoles intensives dans le bassin versant du Mississippi.<br/><br/> Les engrais et les pesticides utilisés sur les terres agricoles finissent par se déverser dans le fleuve Mississippi, qui transporte ces substances nutritives excédentaires jusqu'au golf du Mexique.<br/><br/> Là, les eaux riches en nutriments créent un environnement propice à la prolifération d'algues, donnant naissance à la "Dead Zone" saisonnière. La "Dead Zone" du golf du Mexique est une zone où les niveaux d'oxygène sont si bas qu'ils ne peuvent plus soutenir la vie marine.<br/><br/> Cette situation alarmante est principalement attribuée à un excès d'éléments nutritifs, tels que l'azote et le phosphore, provenant des activités agricoles et industrielles.<br/><br/> Ces nutriments alimentent la croissance excessive d'algues, qui, lorsqu'elles meurent et se décomposent, épuisent l'oxygène de l'eau.</p>
+                        <p>Les origines de la <span class="span_article">"Dead Zone"</span> remontent aux pratiques agricoles intensives dans le bassin versant du <span class="span_article">Mississippi</span>.<br/><br/> Les engrais et les pesticides utilisés sur les terres agricoles finissent par se déverser dans le fleuve Mississippi, qui transporte ces substances nutritives excédentaires jusqu'au golf du Mexique.<br/><br/> Là, les eaux riches en nutriments créent un environnement propice à la <span class="span_article">prolifération d'algues</span>, donnant naissance à la "Dead Zone" saisonnière. La "Dead Zone" du golf du Mexique est une zone où les niveaux d'oxygène <span class="span_article">sont si bas</span> qu'ils ne peuvent plus soutenir la vie marine.<br/><br/> Cette situation alarmante est principalement attribuée à un <span class="span_article">excès d'éléments nutritifs</span>, tels que l'azote et le phosphore, provenant des <span class="span_article">activités agricoles et industrielles</span>.<br/><br/> Ces nutriments alimentent la croissance <span class="span_article">excessive d'algues</span>, qui, lorsqu'elles meurent et se décomposent, <span class="span_article">épuisent l'oxygène de l'eau</span>.</p>
                         <img src="/images/map-dead_zone.png" alt="map-dead_zone">
                     </div>
                 </div>
@@ -35,12 +35,12 @@
                         <div class="main__article__content__research__consequences__box">
                             <p>La "Dead Zone" a des conséquences dramatiques sur la vie marine du Golfe du Mexique. <br/><br/>Les espèces qui dépendent de niveaux d'oxygène normaux sont contraintes de fuir la zone, tandis que celles qui ne peuvent pas s'en échapper peuvent périr. <br/><br/>Les pêcheurs constatent une diminution des captures dans la région touchée, et les écosystèmes marins sont perturbés. </p>
                         </div>
-                        <p class="main__article__content__research__consequences__text">Cela soulève des préoccupations quant à la durabilité des ressources marines et à l'équilibre délicat des écosystèmes.<br/><br/> Des scientifiques du monde entier mènent des recherches approfondies pour comprendre les mécanismes de la "Dead Zone" et trouver des solutions durables.<br/><br/> Des équipes de recherche surveillent de près les niveaux d'oxygène, la croissance des algues, et les facteurs environnementaux qui contribuent à cette énigme écologique. <br/><br/>Les modèles informatiques sont utilisés pour prédire l'étendue et l'intensité de la "Dead Zone" chaque année.</p>
+                        <p class="main__article__content__research__consequences__text">Cela soulève des préoccupations quant à la <span class="span_article">durabilité</span> des ressources marines et à <span class="span_article">l'équilibre</span> délicat des écosystèmes.<br/><br/> Des scientifiques du monde entier mènent des recherches <span class="span_article">approfondies</span> pour comprendre les mécanismes de la <span class="span_article">"Dead Zone"</span> et trouver des solutions durables.<br/><br/> Des équipes de recherche surveillent de près les niveaux d'oxygène, la croissance des algues, et les facteurs environnementaux qui contribuent à cette <span class="span_article">énigme écologique</span>. <br/><br/>Les modèles informatiques sont utilisés pour prédire l'étendue et l'intensité de la <span class="span_article">"Dead Zone"</span> chaque année.</p>
                     </div>
                     <div class="main__article__content__research__endeavor">
                         <div class="main__article__content__research__endeavor__text">
-                            <p>Les efforts pour atténuer la "Dead Zone" se concentrent sur la réduction des déversements de nutriments dans le Mississippi. <br/><br/> Des pratiques agricoles durables, telles que la gestion efficace des engrais, sont encouragées pour minimiser les excès de nutriments.<br/><br/> Des réglementations environnementales visent également à contrôler les déversements industriels et les rejets urbains qui contribuent au problème. <br/><br/>Malgré ces initiatives, la résolution complète de la "Dead Zone" reste un défi complexe et continu.</p>
-                            <p>Les conséquences de la "Dead Zone" ne se limitent pas à l'environnement marin.<br/><br/> Les communautés côtières qui dépendent de la pêche subissent des pertes économiques, et les industries liées au tourisme peuvent être touchées par la mauvaise qualité de l'eau.<br/><br/> La lutte contre la "Dead Zone" implique donc non seulement des efforts scientifiques, mais aussi une sensibilisation du public et des actions coordonnées pour réduire l'empreinte humaine sur les écosystèmes marins.</p>
+                            <p>Les efforts pour atténuer la <span class="span_article">"Dead Zone"</span> se concentrent sur la réduction des déversements de nutriments dans le <span class="span_article">Mississippi</span>. <br/><br/> Des pratiques agricoles durables, telles que la gestion efficace des engrais, sont encouragées pour <span class="span_article">minimiser les excès de nutriments</span>.<br/><br/> Des réglementations environnementales visent également à <span class="span_article">contrôler</span> les déversements industriels et les rejets urbains qui contribuent au problème. <br/><br/>Malgré ces initiatives, la résolution complète de la "Dead Zone" reste un défi <span class="span_article">complexe et continu</span>.</p>
+                            <p>Les conséquences de la <span class="span_article">"Dead Zone"</span> ne se limitent pas à l'environnement marin.<br/><br/> Les communautés côtières qui dépendent de la pêche subissent des <span class="span_article">pertes économiques</span>, et les industries liées au tourisme peuvent être touchées par la mauvaise qualité de l'eau.<br/><br/> La lutte contre la <span class="span_article">"Dead Zone"</span> implique donc non seulement des efforts scientifiques, mais aussi une sensibilisation du public et des actions coordonnées pour <span class="span_article">réduire l'empreinte humaine</span> sur les écosystèmes marins.</p>
                         </div>
                         <img src="/images/explanation-dead_zone.png" alt="">
                     </div>
@@ -54,8 +54,8 @@
                     <img class="image_4" src="/creatures/creature_12.jpg" alt="creature_4">
                 </div>
                 <div class="main__article__conclusion__content__texte">
-                    <h2>Conclusion</h2>
-                    <p>La "Dead Zone" du Golfe du Mexique demeure un mystère écologique complexe, témoignant des ramifications de l'activité humaine sur les océans.<br/><br/> Alors que les scientifiques poursuivent leurs efforts pour comprendre et atténuer ce phénomène, la "Dead Zone" rappelle l'importance cruciale de préserver nos écosystèmes marins.<br/><br/> En équilibrant les besoins humains avec la conservation de la vie marine, nous pouvons espérer restaurer la santé des océans et préserver la diversité biologique pour les générations futures.</p>
+                    <h2><span class="span_article">Conclusion</span></h2>
+                    <p>La <span class="span_article">"Dead Zone"</span> du Golfe du Mexique demeure un mystère écologique <span class="span_article">complexe</span>, témoignant des ramifications de l'activité humaine sur les océans.<br/><br/> Alors que les scientifiques poursuivent leurs efforts pour <span class="span_article">comprendre et atténuer ce phénomène</span>, la <span class="span_article">"Dead Zone"</span> rappelle l'importance cruciale de préserver nos écosystèmes marins.<br/><br/> En <span class="span_article">équilibrant</span> les besoins humains avec la conservation de la vie marine, nous pouvons espérer <span class="span_article">restaurer</span> la santé des océans et préserver la diversité biologique pour les générations futures.</p>
                 </div>
             </div>
         </div>
@@ -288,6 +288,10 @@ onMounted(async () => {
 
 p{
     @include Article_Text;
+}
+
+.span_article{
+    @include Article_Important;
 }
 
 </style>
