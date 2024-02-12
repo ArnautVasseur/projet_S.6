@@ -1,0 +1,114 @@
+<template>
+  <div class="container">
+    <div class="card-container">
+      <Comp_Card class="card"
+        v-for="(card, index) in cards"
+        :key="index"
+        :imageSrc="card.value"
+        :index="index"
+        :flipped="card.flipped"
+        :matched="card.matched"
+        @flip="flipCard"
+      />
+    </div>
+    <Comp_Button @click="resetGame">Reset Game</Comp_Button>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      cards: [
+        { value: '/memorycards_icons/coquiperl.png', flipped: false, matched: false },
+        { value: '/memorycards_icons/raie.png', flipped: false, matched: false },
+        { value: '/memorycards_icons/star.png', flipped: false, matched: false },
+        { value: '/memorycards_icons/meduse.png', flipped: false, matched: false },
+        { value: '/memorycards_icons/dolphin.png', flipped: false, matched: false },
+        { value: '/memorycards_icons/raie.png', flipped: false, matched: false },
+        { value: '/memorycards_icons/meduse.png', flipped: false, matched: false },
+        { value: '/memorycards_icons/star.png', flipped: false, matched: false },
+        { value: '/memorycards_icons/coquiperl.png', flipped: false, matched: false },
+        { value: '/memorycards_icons/seal.png', flipped: false, matched: false },
+        { value: '/memorycards_icons/seal.png', flipped: false, matched: false },
+        { value: '/memorycards_icons/dolphin.png', flipped: false, matched: false }
+      ],
+      flippedCards: [],
+      isChecking: false
+    };
+  },
+  methods: {
+    flipCard(index) {
+      if (!this.isChecking) {
+        this.cards[index].flipped = true;
+        this.flippedCards.push(index);
+
+        if (this.flippedCards.length === 2) {
+          this.isChecking = true;
+          setTimeout(() => {
+            this.checkMatch();
+          }, 1000);
+        }
+      }
+    },
+
+    checkMatch() {
+      const [index1, index2] = this.flippedCards;
+      if (this.cards[index1].value === this.cards[index2].value) {
+        this.cards[index1].matched = true;
+        this.cards[index2].matched = true;
+      } else {
+        this.cards[index1].flipped = false;
+        this.cards[index2].flipped = false;
+      }
+
+      this.flippedCards = [];
+      this.isChecking = false;
+
+      // Check if all cards are matched, then reset the game
+      if (this.cards.every(card => card.matched)) {
+        alert('Congratulations! You won the game!');
+        this.resetGame();
+      }
+    },
+
+    resetGame() {
+      this.cards.forEach(card => {
+        card.flipped = false;
+        card.matched = false;
+      });
+      this.flippedCards = [];
+      this.isChecking = false;
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+.container{
+    background-size: 100% 100%;
+    background-position: 0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(50% 50% at -12% 40%, #00FFFF45 3%, #00031700 100%),radial-gradient(34% 46% at 107% 40%, #00FFFF3D 4%, #00031700 100%),radial-gradient(75% 75% at 50% 50%, #0B0D3AFF 0%, #080A1EFF 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+
+.card-container {
+    background: $light_blue-color;
+    border-radius: 10px;
+    width: 550px;
+    height: fit-content;
+    padding: 30px 0px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @include PictureShadow
+}
+</style>
