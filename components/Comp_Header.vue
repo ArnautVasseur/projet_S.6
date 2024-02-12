@@ -3,7 +3,7 @@
         <ul>
             <div class="header__logo">
                 <RouterLink to="/">
-                    <img src="/icons/user.png" alt="account_icon">
+                    <img class="logo" src="/images/logo.png" alt="logo">
                 </RouterLink>
             </div>
 
@@ -63,7 +63,7 @@ export default {
     top: 0;
     width: 100%;
     background:$primary-color;
-    height: 13vh;
+    height: 15vh;
     display: flex;
     align-content: center;
     align-items: center;
@@ -146,9 +146,14 @@ a{
     cursor: pointer;
 }
 
+.logo{
+    width: 140px;
+    height: 140px;
+}
+
 .icon{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 </style>

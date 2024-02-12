@@ -1,6 +1,8 @@
 <template>
     <div class="main">
-        <img src="/creatures/creature_7.jpg" alt="creature_7">
+        <RouterLink to="/">
+            <img src="/images/logo.png" alt="logo">
+        </RouterLink>
         <div class="main__links">
             <ul>
                 <li>Articles</li>
