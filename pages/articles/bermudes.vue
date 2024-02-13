@@ -7,30 +7,30 @@
         <div class="main__article">
             <div class="main__article__introduction">
                 <div class="main__article__introduction__content">
-                    <div class="main__article__introduction__content__texte">
+                    <div class="main__article__introduction__content__texte" data-aos="fade-right" data-aos-duration="1000">
                         <h2><span class="span_article">Les Mystères Insondables du Triangle des Bermudes : Entre Mythe et Réalité</span></h2>
                         <p>Le Triangle des Bermudes, une région <span class="span_article">énigmatique</span> de l'océan Atlantique, a longtemps été associé à des disparitions <span class="span_article">mystérieuses</span> d'aéronefs et de navires.<br/><br/> Cette zone, délimitée par Miami, les Bermudes et Porto Rico, a alimenté <span class="span_article">l'imagination populaire</span> et suscité des théories diverses sur les causes potentielles de ces incidents.<br/><br/> Dans cet article, nous explorerons les mystères du <span class="span_article">Triangle des Bermudes</span>, démêlant le mythe de la réalité pour tenter de comprendre les phénomènes <span class="span_article">étranges</span> qui ont marqué cette zone.</p>
                     </div>
-                    <div class="main__article__introduction__content__images">
+                    <div class="main__article__introduction__content__images" data-aos="fade-up" data-aos-duration="1000">
                         <img src="/images/Bermudes.png" alt="Bermudes">
                     </div>
                 </div>
             </div>
             <div class="main__article__content">
                 <div class="main__article__content__discovery">
-                    <img src="/images/Bermudes4.webp" alt="creature_8">
-                    <div class="main__article__content__discovery__texte">
+                    <img src="/images/Bermudes4.webp" alt="creature_8" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="main__article__content__discovery__texte" data-aos="fade-left" data-aos-duration="1000">
                         <h2><span class="span_article">Un Théâtre de Disparitions</span></h2>
                         <p>Le Triangle des Bermudes a acquis sa notoriété en raison d'un certain nombre de <span class="span_article">disparitions mystérieuses</span> au cours du <span class="span_article">XXe siècle</span>.<br/><br/> Des avions et des navires ont disparu sans laisser de traces, donnant naissance à des spéculations allant de <span class="span_article">phénomènes paranormaux</span> à des explications scientifiques.<br/><br/> Parmi les incidents les plus célèbres figurent <span class="span_article">la disparition du vol 19 en 1945</span>, <span class="span_article">le vol 441 en 1954</span>, et <span class="span_article">le vol 19 en 1965</span>.</p>
                     </div>
                 </div>
                 <div class="main__article__content__theory">
-                    <h2 class="main__article__content__theory__title">
+                    <h2 class="main__article__content__theory__title" data-aos="fade-up" data-aos-duration="1000">
                         <span class="span_article">Théories et Spéculations</span>
                     </h2>
                     <div class="main__article__content__theory__texte">
-                        <p>Des théories <span class="span_article">paranormales</span> ont souvent été avancées pour expliquer les disparitions dans le Triangle des Bermudes.<br/><br/> Certains ont suggéré l'existence de <span class="span_article">portails</span> vers d'autres dimensions, <span class="span_article">d'extraterrestres</span> ou d'activités liées à <span class="span_article">l'Atlantide</span>.<br/><br/> Ces spéculations, bien que populaires, manquent de preuves tangibles et restent largement rejetées par la communauté scientifique.<br/><br/> Parmi les disparitions les plus célèbres, le <span class="span_article">vol 19 en 1945</span> reste emblématique.<br/><br/> <span class="span_article">Cinq avions de l'US Navy</span> ont disparu au cours d'un exercice d'entraînement, et malgré d'intenses recherches, ni les avions ni les membres d'équipage n'ont été <span class="span_article">retrouvés</span>.</p>
-                        <p>Des explications scientifiques ont également été proposées pour les incidents du <span class="span_article">Triangle des Bermudes</span>.<br/><br/> Les <span class="span_article">variations magnétiques</span>, les <span class="span_article">anomalies géomagnétiques</span> et les <span class="span_article">phénomènes météorologiques</span> inhabituels sont souvent cités comme des facteurs potentiels contribuant aux problèmes de navigation.<br/><br/> Les experts soulignent également la <span class="span_article">densité élevée</span> du trafic aérien et maritime dans cette région, augmentant statistiquement le nombre d'incidents.<br/><br/> Ces disparitions ont contribué à la construction de la <span class="span_article">légende du Triangle des Bermudes</span>.</p>
+                        <p data-aos="fade-right" data-aos-duration="1000">Des théories <span class="span_article">paranormales</span> ont souvent été avancées pour expliquer les disparitions dans le Triangle des Bermudes.<br/><br/> Certains ont suggéré l'existence de <span class="span_article">portails</span> vers d'autres dimensions, <span class="span_article">d'extraterrestres</span> ou d'activités liées à <span class="span_article">l'Atlantide</span>.<br/><br/> Ces spéculations, bien que populaires, manquent de preuves tangibles et restent largement rejetées par la communauté scientifique.<br/><br/> Parmi les disparitions les plus célèbres, le <span class="span_article">vol 19 en 1945</span> reste emblématique.<br/><br/> <span class="span_article">Cinq avions de l'US Navy</span> ont disparu au cours d'un exercice d'entraînement, et malgré d'intenses recherches, ni les avions ni les membres d'équipage n'ont été <span class="span_article">retrouvés</span>.</p>
+                        <p data-aos="fade-left" data-aos-duration="1000">Des explications scientifiques ont également été proposées pour les incidents du <span class="span_article">Triangle des Bermudes</span>.<br/><br/> Les <span class="span_article">variations magnétiques</span>, les <span class="span_article">anomalies géomagnétiques</span> et les <span class="span_article">phénomènes météorologiques</span> inhabituels sont souvent cités comme des facteurs potentiels contribuant aux problèmes de navigation.<br/><br/> Les experts soulignent également la <span class="span_article">densité élevée</span> du trafic aérien et maritime dans cette région, augmentant statistiquement le nombre d'incidents.<br/><br/> Ces disparitions ont contribué à la construction de la <span class="span_article">légende du Triangle des Bermudes</span>.</p>
                     </div>
                 </div>
             </div>
@@ -38,11 +38,11 @@
         </div>
         <div class="main__article__conclusion">
             <div class="main__article__conclusion__content">
-                <div class="main__article__conclusion__content__texte">
+                <div class="main__article__conclusion__content__texte" data-aos="fade-right" data-aos-duration="1000">
                     <h2><span class="span_article">Conclusion</span></h2>
                     <p>Malgré des <span class="span_article">décennies</span> de spéculations, le mystère du <span class="span_article">Triangle des Bermudes</span> persiste.<br/><br/> Les technologies modernes de navigation et de communication ont <span class="span_article">considérablement</span> réduit le nombre d'incidents, mais la <span class="span_article">fascination</span> pour cette zone demeure.<br/><br/> Les chercheurs continuent d'étudier les phénomènes naturels et les facteurs humains qui pourraient expliquer les <span class="span_article">disparitions passées</span>.<br/><br/> Le Triangle des Bermudes continue de captiver l'imagination du public, mêlant <span class="span_article">réalité et légende</span>.<br/><br/> Alors que les explications scientifiques offrent des réponses plausibles, les mystères persistants et les disparitions non résolues contribuent à entretenir le <span class="span_article">mythe</span>.<br/><br/> Que ce soit dû à des forces <span class="span_article">paranormales</span>, à des phénomènes naturels complexes ou à des facteurs humains, le Triangle des Bermudes reste une énigme <span class="span_article">intrigante</span>, incitant à la prudence et à l'exploration scientifique des zones maritimes inexplorées de notre planète.</p>
                 </div>
-                <div class="main__article__conclusion__content__images">
+                <div class="main__article__conclusion__content__images" data-aos="fade-up" data-aos-duration="1000">
                     <img src="/images/Bermudes2.jpg" alt="Bermudes2">
                 </div>
             </div>

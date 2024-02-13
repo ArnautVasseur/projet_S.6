@@ -8,10 +8,10 @@
 
             <div class="main__article__introduction">
                 <div class="main__article__introduction__content">
-                    <div class="main__article__introduction__content__images">
+                    <div class="main__article__introduction__content__images" data-aos="fade-up" data-aos-duration="1000">
                         <img src="/images/Minerve2_1968.jpg" alt="dead_zone">
                     </div>
-                    <div class="main__article__introduction__content__texte">
+                    <div class="main__article__introduction__content__texte" data-aos="fade-left" data-aos-duration="1000">
                         <h2><span class="span_article">Introduction</span></h2>
                         <p>L'année <span class="span_article">1968</span> est marquée par un chapitre <span class="span_article">sombre et mystérieux</span> de l'histoire maritime, alors que <span class="span_article">quatre</span> sous-marins ont mystérieusement disparu sans laisser de trace.<br/><br/> Ces <span class="span_article">événements</span> intrigants ont laissé les experts perplexes et ont alimenté des <span class="span_article">spéculations</span> persistantes sur les circonstances entourant ces disparitions.<br/><br/> Dans cet article, nous plongerons dans le passé pour explorer les mystères de ces <span class="span_article">quatre</span> sous-marins disparus, cherchant des réponses qui échappent encore aux chercheurs des océans.</p>
                     </div>
@@ -19,9 +19,8 @@
             </div>
 
             <div class="main__article__content">
-
                 <div class="main__article__content__presentation">
-                    <div class="main__article__content__presentation__borders">
+                    <div class="main__article__content__presentation__borders" data-aos="fade-up" data-aos-duration="1000">
                         <h2><span class="span_article">Les Disparitions des 4 Sous-Marins de 1968</span></h2>
                         <p>
                             En <span class="span_article">1968</span>, quatre sous-marins de différentes nations ont disparu dans des circonstances <span class="span_article">mystérieuses</span>.<br/><br/> Le sous-marin français <span class="span_article">Minerve</span>, le sous-marin israélien <span class="span_article">INS-Dakar</span>, le sous-marin américain <span class="span_article">Scorpion</span>, et le sous-marin soviétique <span class="span_article">K-129</span> ont tous été <span class="span_article">engloutis</span> par les eaux sans laisser de traces évidentes.<br/><br/> Ces <span class="span_article">disparitions</span> ont suscité des interrogations <span class="span_article">profondes</span> au sein des communautés militaires et civiles, alimentant les théories du complot et les spéculations sur des activités inexpliquées en haute mer.
@@ -36,7 +35,7 @@
 
                 <div class="main__article__content__ships">
 
-                    <div class="main__article__content__ships__box">
+                    <div class="main__article__content__ships__box" data-aos="fade-up" data-aos-duration="1000">
                         <div class="main__article__content__ships__box__texte">
                             <h2><span class="span_article">INS-Dakar Israélien</span></h2>
                             <p>Le sous-marin israélien <span class="span_article">INS-Dakar</span> a mystérieusement disparu en mer Méditerranée en <span class="span_article">janvier 1968</span>.<br/><br/> Après une recherche infructueuse à l'époque, son épave n'a été localisée qu'en <span class="span_article">1999</span>, près de <span class="span_article">l'île de Crète</span>.<br/><br/> Les raisons de sa perte demeurent <span class="span_article">floues</span>, bien que des spéculations mentionnent des problèmes techniques ou des rencontres avec des <span class="span_article">navires étrangers</span>.</p>
@@ -45,7 +44,7 @@
                         <img src="/images/INS-Dakar_location_1968.png" alt="INS-Dakar_location">
                     </div>
 
-                    <div class="main__article__content__ships__box">
+                    <div class="main__article__content__ships__box" data-aos="fade-up" data-aos-duration="1000">
                         <img src="/images/Minerve_location_1968.png" alt="INS-Dakar_location">
                         <div class="main__article__content__ships__box__texte">
                             <h2><span class="span_article">Minerve Français</span></h2>
@@ -54,7 +53,7 @@
                         </div>
                     </div>
 
-                    <div class="main__article__content__ships__box">
+                    <div class="main__article__content__ships__box" data-aos="fade-up" data-aos-duration="1000">
                         <div class="main__article__content__ships__box__texte">
                             <h2><span class="span_article">K-129 Soviétique</span></h2>
                             <p>En <span class="span_article">mars 1968</span>, le sous-marin soviétique <span class="span_article">K-129</span> a disparu dans le Pacifique.<br/><br/> Les Soviétiques ont tenté de localiser l'épave, mais ce sont finalement les Américains qui l'ont retrouvée en <span class="span_article">1974</span>, déclenchant une opération secrète connue sous le nom <span class="span_article">d'Azorian Project</span>.<br/><br/>  Les raisons de la disparition du <span class="span_article">K-129</span> restent incertaines, suscitant des spéculations sur des problèmes techniques ou des <span class="span_article">manœuvres militaires risquées</span>.</p>
@@ -63,7 +62,7 @@
                         <img src="/images/K-129_location_1968.png" alt="K-129_location">
                     </div>
 
-                    <div class="main__article__content__ships__box">
+                    <div class="main__article__content__ships__box" data-aos="fade-up" data-aos-duration="1000">
                         <img src="/images/UUS-scorpion_location_1968.png" alt="UUS-scorpion_location">
                         <div class="main__article__content__ships__box__texte">
                             <h2><span class="span_article">USS Scorpion</span></h2>
@@ -78,10 +77,10 @@
         
         <div class="main__article__conclusion">
             <div class="main__article__conclusion__content">
-                <div class="main__article__conclusion__content__images">
+                <div class="main__article__conclusion__content__images" data-aos="fade-up" data-aos-duration="1000">
                     <img src="/creatures/creature_6.jpg" alt="creature_6">
                 </div>
-                <div class="main__article__conclusion__content__texte">
+                <div class="main__article__conclusion__content__texte" data-aos="fade-left" data-aos-duration="1000">
                     <h2>Conclusion</h2>
                     <p>En revisitant les mystères des <span class="span_article">quatre sous-marins disparus en 1968</span>, nous nous confrontons à des énigmes maritimes qui demeurent <span class="span_article">insolubles</span>.<br/><br/> Ces disparitions continuent de captiver <span class="span_article">l'imagination</span> et soulèvent des questions persistantes sur ce qui s'est <span class="span_article">réellement</span> passé en mer.<br/><br/> Alors que la technologie moderne progresse, les espoirs de résoudre ces <span class="span_article">mystères</span> grandissent, mais pour l'instant, les circonstances exactes de ces événements demeurent <span class="span_article">enfouies</span> dans les profondeurs de l'océan, attendant d'être révélées.</p>
                 </div>
@@ -93,7 +92,6 @@
 </template>
 
 <script setup lang="ts">
-
 
 const store = useGlobalStore()
 
