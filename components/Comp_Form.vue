@@ -116,12 +116,12 @@ export default {
     position: relative;
     width: 800px;
     height: 400px;
-    background: $purple-color;
+    background: $deep_blue-color;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 1s ease-in-out;
-    animation: SlideInTop 1s ease-out;
+    animation: fadeIn 1s ease-out;
 
     .formBx{
         position: absolute;
@@ -136,7 +136,7 @@ export default {
         align-items: center;
         flex-direction: column;
         overflow: hidden;
-        box-shadow: 0px 0px 20px $purple-color;
+        box-shadow: 0px 0px 20px $blue-color;
 
         form{
             display: flex;
@@ -183,7 +183,7 @@ export default {
 
                 input:focus ~ span,
                 input:not(:placeholder-shown) ~ span{
-                    color: lighten($purple-color, 25%);
+                    color: lighten($blue-color, 25%);
                     transition: 0.5s;
                     top: -22%;
                     left: 10px;
@@ -300,14 +300,12 @@ export default {
     }
 }
 
-@keyframes SlideInTop{
+@keyframes fadeIn{
     0%{
         opacity: 0;
-        transform: translateY(50%)
     }
     100%{
         opacity: 1;
-        transform: translateY(0%)
     }
 }
 </style>

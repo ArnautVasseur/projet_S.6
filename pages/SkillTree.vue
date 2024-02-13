@@ -59,12 +59,16 @@
                     <div class="SkillTree__Lines__5"></div>
                     <div class="SkillTree__Lines__6"></div>
                     <div class="SkillTree__Lines__7"></div>
+                    <div class="SkillTree__Lines__8"></div>
+                    <div class="SkillTree__Lines__9"></div>
+                    <div class="SkillTree__Lines__10"></div>
                 </div>
             </div>
         </div>
         <div class="main__2">
             <p>Points: {{ Points }}</p>
-            <ul>
+            <ul class="unlocked">
+                <li>Vous avez débloqué: </li> 
                 <li v-for="achieve in achievement" :key="achieve.name">
                     {{ achieve.name }}
                 </li>
@@ -90,8 +94,6 @@ const getAchievement = async () => {
     const response = await API.get(`/achievements/${store.token}`);
     achievement.value = response.data
     const userAchievements = response.data.map((ach: { name: string }) => ach.name);
-
-    
     
     achievement.value.forEach((succes: { name: string; }) =>{
         if(succes.name == "Triangle Des Bermudes"){
@@ -301,10 +303,20 @@ definePageMeta({
 </script>
 
 <style lang="scss" scoped>
+
+.unlocked{
+    margin-top: 50px;
+    padding: 20px;
+
+    li{
+        margin-top: 10px;
+    }
+}
 .main{
     display: flex;
     width: 100vw;
     height: 100vh;
+    color: white;
 
     &__1{
         width: 80vw;

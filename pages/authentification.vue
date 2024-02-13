@@ -1,10 +1,8 @@
 <template>
     <body class="container">
-        <div class="container__section__1">
-            <Comp_Button @click="deconnexion">Déconnexion</Comp_Button>
-        </div>
-        <div class="container__section__2">
+        <div class="container__section">
             <Comp_Form></Comp_Form>
+            <Comp_Button @click="deconnexion">Déconnexion</Comp_Button>
         </div>
     </body>
 </template>
@@ -23,6 +21,9 @@ const deconnexion = async () => {
 <style scoped lang="scss">
 .container{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
     margin: 0px;
     width: 100vw;
     height: 100vh;
@@ -36,25 +37,14 @@ const deconnexion = async () => {
     background-size: 120%;
     background-repeat: no-repeat;
 
-    &__section__1 {
+    &__section {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-content: center;
         align-items: center;
-        width: 40vw;
-        height: 100vh;
-        background: none;
-    }
-
-    &__section__2 {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        width: 60vw;
-        height: 100vh;
-        background-color: $primary-color;
-        box-shadow: -15px 0px 20px $primary-color;
+        gap: 100px;
+        width: 100%;
+        height: 100%;
     }
 }
 </style>

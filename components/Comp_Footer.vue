@@ -20,6 +20,7 @@
                 <li>Jeu de Tir</li>
                 <li>Flood-It</li>
                 <li>Sous-Marin</li>
+                <li>Jeu de mémoire</li>
             </ul>
             <ul>
                 <li>Autres</li>
@@ -54,6 +55,8 @@
         ul{
             list-style: none;
             padding: 10px;
+            border-left: 2px solid $teal-color;
+            height: fit-content;
 
             li{
                 padding: 10px;
@@ -76,8 +79,8 @@
 }
 
 img{
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
 }
 
 </style>

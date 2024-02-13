@@ -14,9 +14,9 @@
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/articles">
+                    <div>
                         Articles
-                    </RouterLink>
+                    </div>
                     <ul>
                         <li><RouterLink to="/articles/bermudes">Triangle des Bermudes</RouterLink></li>
                         <li><RouterLink to="/articles/dragon">Triangle du Dragon</RouterLink></li>
@@ -30,9 +30,10 @@
                     </ul>
                 </li>
                 <li>
-                    <RouterLink to="/games">
+                    <div>
                         Mini-Jeux
-                    </RouterLink>
+                    </div>
+                    
                     <ul>
                         <li><RouterLink to="/games/aimtraining">Jeu de tir</RouterLink></li>
                         <li><RouterLink to="/games/floodit">Flood It</RouterLink></li>
@@ -62,11 +63,11 @@ export default {
     position: sticky;
     top: 0;
     width: 100%;
-    background:$primary-color;
     height: 15vh;
     display: flex;
     align-content: center;
     align-items: center;
+    backdrop-filter: blur(7px);
 
     &__logo{
         width: 15%;
@@ -91,7 +92,7 @@ export default {
 nav{
 
     a{
-        color: white;
+        color: $teal-color;
         display: block;
         text-decoration: none;
         
@@ -105,6 +106,8 @@ nav{
         align-items: center;
 
         li{
+            font-weight: 600;
+            color: $teal-color;
 
             ul{ 
                 padding: 20px;

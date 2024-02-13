@@ -4,3 +4,17 @@
 *, *::before, *::after{
     box-sizing: border-box;
 }
+
+html{
+    background-color: $primary-color;
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+p::selection,
+a::selection {
+    color: $primary-color;
+    background-color: $light_blue-color;
+}
