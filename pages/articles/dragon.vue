@@ -1,6 +1,6 @@
 <template>
   <Comp_Header class="header"></Comp_Header>
-  <div v-if="store.achievement__5" class="main">
+  <div v-if="store.achievement__7" class="main">
         <div class="main__presentation">
             Le Triangle du Dragon
         </div>

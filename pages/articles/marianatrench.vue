@@ -1,6 +1,6 @@
 <template>
   <Comp_Header class="header"></Comp_Header>
-  <div v-if="store.achievement__5" class="main">
+  <div v-if="store.achievement__8" class="main">
         <div class="main__presentation">
             La Fosse Mariane
         </div>
