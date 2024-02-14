@@ -56,6 +56,7 @@
             color: $light_blue-color;
             text-align: center;
             animation: fadeIn ease-in-out 1s;
+            margin-bottom: 100px;
         }
 
         &__box{
@@ -103,7 +104,7 @@
 }
 
 .logo{
-    width: 500px;
+    width: 350px;
 }
 
 @keyframes slideLeft{

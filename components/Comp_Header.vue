@@ -38,6 +38,7 @@
                         <li><RouterLink to="/games/aimtraining">Jeu de tir</RouterLink></li>
                         <li><RouterLink to="/games/floodit">Flood It</RouterLink></li>
                         <li><RouterLink to="/games/minitas">Sous-marin</RouterLink></li>
+                        <li><RouterLink to="/games/memorycards">Jeu de mémoire</RouterLink></li>;
                     </ul>
                 </li>
                 <li>
@@ -150,8 +151,7 @@ a{
 }
 
 .logo{
-    width: 140px;
-    height: 140px;
+    width: 100px;
 }
 
 .icon{

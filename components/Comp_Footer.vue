@@ -5,21 +5,77 @@
         </RouterLink>
         <div class="main__links">
             <ul>
-                <li>Articles</li>
-                <li>Triangle des Bermudes</li>
-                <li>Triangle du Dragon</li>
-                <li>Fosse Mariane</li>
-                <li>The Bloop</li>
-                <li>Les Cryptides Sous-Marines</li>
-                <li>Les Vaisseaux Fantômes</li>
-                <li>Mary Celeste</li>
-                <li>Les Disparitions de 1968</li>
+
+                <li>
+                    Articles
+                </li>
+
+                <li>
+                    <RouterLink to="/articles/bermudes">
+                        Triangle des Bermudes
+                    </RouterLink>
+                </li>
+
+                <li>
+                    <RouterLink to="/articles/dragon">
+                        Triangle du Dragon
+                    </RouterLink>
+                </li>
+
+                <li>
+                    <RouterLink to="/articles/marianatrench">
+                        Fosse Mariane
+                    </RouterLink>
+                </li>
+
+                <li>
+                    <RouterLink to="/articles/bloop">
+                        The Bloop
+                    </RouterLink>
+                </li>
+
+                <li>
+                    <RouterLink to="/articles/cryptids">
+                        Les Cryptides Sous-Marines
+                    </RouterLink>
+                </li>
+
+                <li>
+                    <RouterLink to="/articles/ghostships">
+                        Les Vaisseaux Fantômes
+                    </RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="/articles/maryceleste">
+                        Mary Celeste
+                    </RouterLink>
+                </li>
+
+                <li>
+                    <RouterLink to="/articles/1968">
+                        Les Disparitions de 1968
+                    </RouterLink>
+                </li>
             </ul>
             <ul>
-                <li>Mini-Jeux</li>
-                <li>Jeu de Tir</li>
-                <li>Flood-It</li>
-                <li>Sous-Marin</li>
+                <li>
+                    Mini-Jeux
+                </li>
+                <li>
+                    <RouterLink to="/games/aimtraining">
+                        Jeu de Tir
+                    </RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="/games/aimtraining">
+                        Flood-It
+                    </RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="/games/aimtraining">
+                        Sous-Marin
+                    </RouterLink>
+                </li>
                 <li>Jeu de mémoire</li>
             </ul>
             <ul>
@@ -38,6 +94,10 @@
 </script>
 
 <style lang="scss" scoped>
+
+a{
+    all: unset;
+}
 
 .main{
     display: flex;
@@ -79,8 +139,7 @@
 }
 
 img{
-    width: 350px;
-    height: 350px;
+    width: 250px;
 }
 
 </style>
