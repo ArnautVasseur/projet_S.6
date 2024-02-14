@@ -5,53 +5,53 @@
                 <div class="SkillTree__Start">
                     <div class="SkillTree__Item__Départ" :class="{ 'checked': Achievements[0].checked.value }" @click="checkbox(Achievements[0])">
                         <p>{{ Achievements[0].Name }}</p>
-                        <p>{{ Achievements[0].checked }}</p>
                     </div>
                     <div class="SkillTree__Item__Bermudes" :class="{ 'checked': Achievements[1].checked.value }" @click="checkbox(Achievements[1])">
                         <p>{{ Achievements[1].Name }}</p>
-                        <p>{{ Achievements[1].checked }}</p>
                     </div>
                 </div>
-                <div class="SkillTree__Locations">
+                
+                <div class="SkillTree__FirstRow">
                     <div class="SkillTree__Item__Dragon" :class="{ 'checked': Achievements[7].checked.value }" @click="checkbox(Achievements[7])">
                         <p>{{ Achievements[7].Name }}</p>
-                        <p>{{ Achievements[7].checked }}</p>
                     </div>
-                    <div class="SkillTree__Item__DeadZone" :class="{ 'checked': Achievements[9].checked.value }" @click="checkbox(Achievements[9])">
-                        <p>{{ Achievements[9].Name }}</p>
-                        <p>{{ Achievements[9].checked }}</p>
-                    </div>
-                    <div class="SkillTree__Item__MarianaTrench" :class="{ 'checked': Achievements[8].checked.value }" @click="checkbox(Achievements[8])">
-                        <p>{{ Achievements[8].Name }}</p>
-                        <p>{{ Achievements[8].checked }}</p>
-                    </div>
-                </div>
-                <div class="SkillTree__Disappearances">
-                    <div class="SkillTree__Item__GhostLights" :class="{ 'checked': Achievements[2].checked.value }" @click="checkbox(Achievements[2])">
-                        <p>{{ Achievements[2].Name }}</p>
-                        <p>{{ Achievements[2].checked }}</p>
-                    </div>
-                    <div class="SkillTree__Item__MaryCeleste" :class="{ 'checked': Achievements[4].checked.value }" @click="checkbox(Achievements[4])">
-                        <p>{{ Achievements[4].Name }}</p>
-                        <p>{{ Achievements[4].checked }}</p>
-                    </div>
-                    <div class="SkillTree__Item__SubMarines" :class="{ 'checked': Achievements[3].checked.value }" @click="checkbox(Achievements[3])">
-                        <p>{{ Achievements[3].Name }}</p>
-                        <p>{{ Achievements[3].checked }}</p>
-                    </div>
-                </div>
-                <div class="SkillTree__Creatures">
                     <div class="SkillTree__Item__Bloop" :class="{ 'checked': Achievements[5].checked.value }" @click="checkbox(Achievements[5])">
                         <p>{{ Achievements[5].Name }}</p>
-                        <p>{{ Achievements[5].checked }}</p>
                     </div>
-                    <div class="SkillTree__Item__Cryptids" :class="{ 'checked': Achievements[6].checked.value }" @click="checkbox(Achievements[6])">
-                        <p>{{ Achievements[6].Name }}</p>
-                        <p>{{ Achievements[6].checked }}</p>
+                    <div class="SkillTree__Item__GhostLights" :class="{ 'checked': Achievements[2].checked.value }" @click="checkbox(Achievements[2])">
+                        <p>{{ Achievements[2].Name }}</p>
                     </div>
                 </div>
+                
+                <div class="SkillTree__SecondRow">
 
-                <div class="SkillTree__Lines">
+                    <div class="SkillTree__Item__DeadZone" :class="{ 'checked': Achievements[9].checked.value }" @click="checkbox(Achievements[9])">
+                        <p>{{ Achievements[9].Name }}</p>
+                    </div>
+
+                    <div class="SkillTree__Item__Cryptids" :class="{ 'checked': Achievements[6].checked.value }" @click="checkbox(Achievements[6])">
+                        <p>{{ Achievements[6].Name }}</p>
+                    </div>
+                    
+                    <div class="SkillTree__Item__MaryCeleste" :class="{ 'checked': Achievements[4].checked.value }" @click="checkbox(Achievements[4])">
+                        <p>{{ Achievements[4].Name }}</p>
+                    </div>
+                    
+                </div>
+
+                <div class="SkillTree__ThirdRow">
+                    
+                    <div class="SkillTree__Item__MarianaTrench"  :class="{ 'checked': Achievements[8].checked.value }" @click="checkbox(Achievements[8])">
+                        <p>{{ Achievements[8].Name }}</p>
+                    </div>
+                    
+                    <div class="SkillTree__Item__SubMarines" :class="{ 'checked': Achievements[3].checked.value }" @click="checkbox(Achievements[3])">
+                        <p>{{ Achievements[3].Name }}</p>
+                    </div>
+
+                </div>
+
+                <!-- <div class="SkillTree__Lines">
                     <div class="SkillTree__Lines__1"></div>
                     <div class="SkillTree__Lines__2"></div>
                     <div class="SkillTree__Lines__3"></div>
@@ -62,17 +62,54 @@
                     <div class="SkillTree__Lines__8"></div>
                     <div class="SkillTree__Lines__9"></div>
                     <div class="SkillTree__Lines__10"></div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="main__2">
-            <p>Points: {{ Points }}</p>
             <ul class="unlocked">
-                <li>Vous avez débloqué: </li> 
-                <li v-for="achieve in achievement" :key="achieve.name">
-                    {{ achieve.name }}
+                <h2 class="unlocked__title">Vous avez débloqué: </h2>
+                
+                <li v-if="store.achievement__1">
+                    <RouterLink to="/articles/bermudes">
+                        Triangle des Bermudes
+                    </RouterLink>
                 </li>
+                
+
+                <RouterLink to="/articles/ghostships">
+                    <li v-if="store.achievement__2">Vaisseaux fantômes de la mer Baltique</li>
+                </RouterLink>
+
+                <RouterLink to="/articles/1968">
+                    <li v-if="store.achievement__3">Disparitions Sous-Marins 1968</li>
+                </RouterLink>
+
+                <RouterLink to="/articles/maryceleste">
+                    <li v-if="store.achievement__4">Mary Celeste</li>
+                </RouterLink>
+
+                <RouterLink to="/articles/bloop">
+                    <li v-if="store.achievement__5">The Bloop</li>
+                </RouterLink>
+
+                <RouterLink to="/articles/cryptids">
+                    <li v-if="store.achievement__6">Les Cryptides Sous-Marines</li>
+                </RouterLink>
+
+                <RouterLink to="/articles/dragon">
+                    <li v-if="store.achievement__7">Triangle Du Dragon</li>
+                </RouterLink>
+
+                <RouterLink to="/articles/marianatrench">
+                    <li v-if="store.achievement__8">La fosse Mariane</li>
+                </RouterLink>
+
+                <RouterLink to="/articles/deadzone">
+                    <li v-if="store.achievement__9">Golf du Mexique, 'Dead Zone'</li>
+                </RouterLink>
+                
             </ul>
+            <p>Points: {{ Points }}</p>
             <p v-if="errormessage" class="pointserror">Vous n'avez plus de points !</p>
         </div>
     </div>
@@ -117,7 +154,7 @@ const getAchievement = async () => {
         if(succes.name == "Triangle Du Dragon"){
             store.achievement__7 = true;
         }
-        if(succes.name == "La fosse Mariane"){
+        if(succes.name == "La Fosse Mariane"){
             store.achievement__8 = true;
         }
         if(succes.name == "Golf du Mexique, 'Dead Zone'"){
@@ -171,7 +208,7 @@ let Achievements = [
         Name: "Disparitions Sous-Marins 1968",
         Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
         checked: ref(false),
-        parent:["SkillTree_2"],
+        parent:["SkillTree_4"],
     },
     {
         achievement_ID : 4,
@@ -208,10 +245,10 @@ let Achievements = [
     {
         achievement_ID : 8,
         ID: "SkillTree_8",
-        Name: "La fosse Mariane",
+        Name: "La Fosse Mariane",
         Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
         checked: ref(false),
-        parent:["SkillTree_9", "SkillTree_7"],
+        parent:["SkillTree_9"],
     },
     {
         achievement_ID : 9,
@@ -219,7 +256,7 @@ let Achievements = [
         Name: "Golf du Mexique, 'Dead Zone'",
         Tooltip: "Débloquez cette partie du site pour 1 Point de Compétence",
         checked: ref(false),
-        parent:["SkillTree_1"],
+        parent:["SkillTree_7"],
     },
 ]
 
@@ -304,13 +341,35 @@ definePageMeta({
 
 <style lang="scss" scoped>
 
+h2{
+    text-align: center;
+    font-size: $desktop-large;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+a{
+    all: unset;
+    cursor: pointer;
+}
+
 .unlocked{
     margin-top: 50px;
     padding: 20px;
 
     li{
-        margin-top: 10px;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid $teal-color;
+        transition: 300ms ease-in-out;
+        text-align: center;
     }
+}
+
+.unlocked li:hover{
+    background: $teal-color;
+    color: $primary-color;
+    padding: 20px 10px;
 }
 .main{
     display: flex;
@@ -327,13 +386,20 @@ definePageMeta({
         width: 20vw;
         height: 100vh;
         background: none;
+
+        p{
+            text-align: center;
+            font-size: $desktop-large;
+            font-weight: 400;
+        }
     }
 }
 
 .SkillTree{
     position: relative;
     padding: 20px;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
     width: 100%;
     height: 100%;
     background-image: radial-gradient(30% 45% at 100% 74%, #3E21CBFF 1%, #073AFF00 100%),
@@ -343,152 +409,70 @@ definePageMeta({
     &__Item {
 
         &__Départ{
+            width: 320px;
+            height: 205px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            background: $light_blue-color;
+            font-size: 1.5rem;
+
+            &.checked {
+                background: $blue-color;
+            }
+        }
+
+        &__Bermudes, &__Dragon, &__DeadZone, &__MarianaTrench, &__GhostLights, &__MaryCeleste, &__SubMarines, &__Bloop, &__Cryptids{
             width: 275px;
             height: 176px;
-            @include SkillTree__Box;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            background: none;
+            backdrop-filter: blur(10px);
+            @include PictureShadow;
+            transition: 1s ease-in-out;
+            font-size: 1.3rem;
 
             &.checked {
-                border: 5px solid white;
-            }
-        }
-
-        &__Bermudes{
-            width: 211px;
-            height: 135px;
-            @include SkillTree__Box;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            &.checked {
-                border: 5px solid white;
-            }
-        }
-
-        &__Dragon{
-            width: 173px;
-            height: 111px;
-            @include SkillTree__Box;
-            top: 20%;
-            left: 27.5%;
-            transform: translate(-50%, -50%);
-
-            &.checked {
-                border: 5px solid white;
-            }
-        }
-
-        &__DeadZone{
-            width: 173px;
-            height: 111px;
-            @include SkillTree__Box;
-            top: 60%;
-            left: 27.5%;
-            transform: translate(-50%, -50%);
-
-            &.checked {
-                border: 5px solid white;
-            }
-        }
-
-        &__MarianaTrench{
-            width: 173px;
-            height: 111px;
-            @include SkillTree__Box;
-            top: 40%;
-            left: 10%;
-            transform: translate(-50%, -50%);
-
-            &.checked {
-                border: 5px solid white;
-            }
-        }
-
-        &__GhostLights{
-            width: 173px;
-            height: 111px;
-            @include SkillTree__Box;
-            top: 40%;
-            left: 72.5%;
-            transform: translate(-50%, -50%);
-
-            &.checked {
-                border: 5px solid white;
-            }
-        }
-
-        &__MaryCeleste{
-            width: 173px;
-            height: 111px;
-            @include SkillTree__Box;
-            top: 20%;
-            left: 90%;
-            transform: translate(-50%, -50%);
-
-            &.checked {
-                border: 5px solid white;
-            }
-        }
-
-        &__SubMarines{
-            width: 173px;
-            height: 111px;
-            @include SkillTree__Box;
-            top: 60%;
-            left: 90%;
-            transform: translate(-50%, -50%);
-
-            &.checked {
-                border: 5px solid white;
-            }
-        }
-
-        &__Bloop{
-            width: 173px;
-            height: 111px;
-            @include SkillTree__Box;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            &.checked {
-                border: 5px solid white;
-            }
-        }
-
-        &__Cryptids{
-            width: 173px;
-            height: 111px;
-            @include SkillTree__Box;
-            top: 80%;
-            left: 72.5%;
-            transform: translate(-50%, -50%);
-
-            &.checked {
-                border: 5px solid white;
+                background: $light_blue-color;
+                box-shadow: none;
             }
         }
     }
 
-    &__Lines{
-
-        &__1{
-            width: 5px;
-            height: 150px;
-            background: white;
-            transition: 0.5s;
-            transform: translate(-50%, -50%);
-            display: none;
-
-            &.checked {
-                background-color: white;
-                box-shadow: 0px 0px 20px white;
-            }
-        }
+    &__Start{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        width: 100%;
+        margin-bottom: 50px;
     }
+
+    &__FirstRow, &__SecondRow{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 50px;
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+     &__ThirdRow{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 50px;
+        width: 100%;
+     }
+
 }
 
 </style>
