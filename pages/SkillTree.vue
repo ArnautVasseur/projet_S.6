@@ -101,7 +101,7 @@
                 </RouterLink>
 
                 <RouterLink to="/articles/marianatrench">
-                    <li v-if="store.achievement__8">La fosse Mariane</li>
+                    <li v-if="store.achievement__8">La Fosse Mariane</li>
                 </RouterLink>
 
                 <RouterLink to="/articles/deadzone">
@@ -170,6 +170,8 @@ const getAchievement = async () => {
         }
     });
 };
+
+console.log(store.achievement__8)
 
 onMounted(async () => {
     await store.token
@@ -438,6 +440,7 @@ a{
             @include PictureShadow;
             transition: 1s ease-in-out;
             font-size: 1.3rem;
+            cursor: pointer;
 
             &.checked {
                 background: $light_blue-color;

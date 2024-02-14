@@ -8,10 +8,10 @@
 
             <div class="main__article__introduction">
                 <div class="main__article__introduction__content">
-                    <div class="main__article__introduction__content__images">
+                    <div class="main__article__introduction__content__images" data-aos="fade-up" data-aos-duration="1000">
                         <img src="/images/ghostship4.avif" alt="ghostship4">
                     </div>
-                    <div class="main__article__introduction__content__texte">
+                    <div class="main__article__introduction__content__texte" data-aos="fade-left" data-aos-duration="1000">
                         <h2><span class="span_article">Introduction</span></h2>
                         <p>La Mer Baltique, riche en histoire et en légendes, est le théâtre de <span class="span_article">récits fascinants</span> sur des vaisseaux fantômes.<br/><br/> Ces mystérieuses histoires ont perduré à travers les <span class="span_article">siècles</span>, suscitant l'imagination des marins et des chercheurs.<br/><br/> Dans cet article, nous plongerons dans l'univers des vaisseaux fantômes de la Mer Baltique, explorant les <span class="span_article">récits légendaires</span> et les réalités mystérieuses qui persistent encore <span class="span_article">aujourd'hui</span>.</p>
                     </div>
@@ -22,17 +22,17 @@
 
                 <div class="main__article__content__ships">
 
-                    <div class="main__article__content__ships__box">
+                    <div class="main__article__content__ships__box" data-aos="fade-up" data-aos-duration="1000">
                         <div class="main__article__content__ships__box__texte">
                             <h2><span class="span_article">Les Légendes de la Mer Baltique</span></h2>
                             <p>La Mer Baltique, bordée par plusieurs pays aux <span class="span_article">traditions maritimes riches</span>, est imprégnée de légendes de vaisseaux fantômes.<br/><br/> L'une des histoires les plus célèbres est celle du <span class="span_article">Hollandais Volant</span>, un navire maudit condamné à errer <span class="span_article">éternellement</span> sur les eaux.<br/><br/> Les récits de marins rapportent avoir vu ses voiles spectrales à l'horizon, présageant souvent des <span class="span_article">tempêtes dévastatrices</span>.</p>
                             <span class="border_btm"></span>
                         </div>
-                        <img src="/images/ghostship5.png" alt="ghostship5">
+                        <img src="/images/ghostship5.png" alt="ghostship5" data-aos="fade-up" data-aos-duration="1000">
                     </div>
 
-                    <div class="main__article__content__ships__box">
-                        <img class="vasa" src="/images/ghostship3.avif" alt="ghostship3">
+                    <div class="main__article__content__ships__box" data-aos="fade-up" data-aos-duration="1000">
+                        <img class="vasa" src="/images/ghostship3.avif" alt="ghostship3" data-aos="fade-up" data-aos-duration="1000">
                         <div class="main__article__content__ships__box__texte">
                             <h2><span class="span_article">Le Spectre du Vasa</span></h2>
                             <p>Un des vaisseaux les plus célèbres de la Mer Baltique, <span class="span_article">le Vasa</span>, a lui-même acquis une réputation de <span class="span_article">vaisseau fantôme</span>.<br/><br/> Construit au <span class="span_article">XVIIe siècle</span> pour le <span class="span_article">roi suédois Gustave II Adolphe</span>, le Vasa a sombré lors de son voyage inaugural en <span class="span_article">1628</span>.<br/><br/> Au fil des siècles, des marins ont prétendu voir le Vasa ressurgir des profondeurs, <span class="span_article">hantant les eaux</span> avec son histoire tragique.</p>
@@ -40,29 +40,29 @@
                         </div>
                     </div>
 
-                    <div class="main__article__content__ships__box">
+                    <div class="main__article__content__ships__box" data-aos="fade-up" data-aos-duration="1000">
                         <div class="main__article__content__ships__box__texte">
                             <h2><span class="span_article">La Malédiction des Voiles Blanches</span></h2>
                             <p>Certains récits de vaisseaux fantômes de la Mer Baltique parlent d'une malédiction associée aux <span class="span_article">voiles blanches</span>.<br/><br/> Selon la légende, les marins apercevant un navire <span class="span_article">aux voiles immaculées</span> seraient condamnés à rencontrer un <span class="span_article">destin funeste</span>.<br/><br/> Cette croyance a contribué à l'atmosphère mystique entourant certains navires qui apparaissent soudainement puis disparaissent <span class="span_article">sans laisser de trace</span>.</p>
                             <span class="border_btm"></span>
                         </div>
-                        <img src="/images/ghostship.avif" alt="ghostship">
+                        <img src="/images/ghostship.avif" alt="ghostship" data-aos="fade-up" data-aos-duration="1000">
                     </div>
                 </div>
 
                 <div class="main__article__content__discovery">
-                    <img src="/images/ghostship2.avif" alt="ghostship2">
-                    <div class="main__article__content__discovery__texte">
+                    <img src="/images/ghostship2.avif" alt="ghostship2" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="main__article__content__discovery__texte" data-aos="fade-left" data-aos-duration="1000">
                         <h2><span class="span_article">La Réalité des Vaisseaux Submergés</span></h2>
                         <p>Au-delà des légendes, la Mer Baltique renferme de véritables <span class="span_article">vaisseaux submergés</span>, figés dans le temps.<br/><br/> L'un des exemples les plus connus est <span class="span_article">le Vasa</span>, découvert au fond de la baie de Stockholm en <span class="span_article">1956</span>.<br/><br/> Les conditions uniques de la Mer Baltique, caractérisées par une faible teneur en sel, ont préservé de nombreux navires anciens, créant une sorte de <span class="span_article">musée sous-marin</span>.<br/><br/> La préservation exceptionnelle des épaves dans la Mer Baltique a ouvert la voie à des <span class="span_article">découvertes énigmatiques</span>.<br/><br/> Des navires datant de plusieurs siècles ont été retrouvés avec leurs <span class="span_article">cargaisons intactes</span>, offrant un aperçu fascinant de la vie maritime passée.<br/><br/> Cependant, les raisons de leur naufrage restent souvent <span class="span_article">obscures</span>, alimentant le mystère qui entoure ces vestiges.</p>
                     </div>
                 </div>
 
                 <div class="main__article__content__theory">
-                    <h2 class="main__article__content__theory__title"><span class="span_article">Théories et Spéculations</span></h2>
+                    <h2 class="main__article__content__theory__title" data-aos="fade-up" data-aos-duration="1000"><span class="span_article">Théories et Spéculations</span></h2>
                     <div class="main__article__content__theory__texte">
-                        <p>Les avancées technologiques modernes, telles que <span class="span_article">la sonar</span> et les <span class="span_article">véhicules sous-marins télécommandés</span>, permettent désormais d'explorer les fonds marins de la Mer Baltique avec une <span class="span_article">précision inégalée</span>.<br/><br/> Ces outils ont permis de <span class="span_article">cartographier</span> et <span class="span_article">d'étudier</span> de manière approfondie les épaves, ouvrant de nouvelles perspectives sur l'histoire maritime de la région.</p>
-                        <p>La préservation du <span class="span_article">riche patrimoine</span> sous-marin de la Mer Baltique est devenue une <span class="span_article">préoccupation majeure</span>.<br/><br/> Les autorités et les chercheurs s'efforcent de <span class="span_article">protéger ces vestiges historiques</span> tout en continuant d'enquêter sur les mystères qu'ils renferment.<br/><br/> La collaboration internationale vise à préserver ce patrimoine unique pour les générations futures.</p>
+                        <p data-aos="fade-right" data-aos-duration="1000">Les avancées technologiques modernes, telles que <span class="span_article">la sonar</span> et les <span class="span_article">véhicules sous-marins télécommandés</span>, permettent désormais d'explorer les fonds marins de la Mer Baltique avec une <span class="span_article">précision inégalée</span>.<br/><br/> Ces outils ont permis de <span class="span_article">cartographier</span> et <span class="span_article">d'étudier</span> de manière approfondie les épaves, ouvrant de nouvelles perspectives sur l'histoire maritime de la région.</p>
+                        <p data-aos="fade-left" data-aos-duration="1000">La préservation du <span class="span_article">riche patrimoine</span> sous-marin de la Mer Baltique est devenue une <span class="span_article">préoccupation majeure</span>.<br/><br/> Les autorités et les chercheurs s'efforcent de <span class="span_article">protéger ces vestiges historiques</span> tout en continuant d'enquêter sur les mystères qu'ils renferment.<br/><br/> La collaboration internationale vise à préserver ce patrimoine unique pour les générations futures.</p>
                     </div>
                 </div>
 
@@ -71,11 +71,11 @@
         
         <div class="main__article__conclusion">
             <div class="main__article__conclusion__content">
-                <div class="main__article__conclusion__content__texte">
+                <div class="main__article__conclusion__content__texte" data-aos="fade-right" data-aos-duration="1000">
                     <h2><span class="span_article">Conclusion</span></h2>
                     <p>Les vaisseaux fantômes de la Mer Baltique, qu'ils soient issus de <span class="span_article">légendes séculaires</span> ou de découvertes archéologiques, continuent de captiver notre imagination.<br/><br/> Entre <span class="span_article">réalité et mystère</span>, ces histoires reflètent la profondeur de l'héritage maritime de la région.<br/><br/> Alors que la technologie moderne éclaire les mystères du passé, la Mer Baltique demeure <span class="span_article">une mer de légendes et d'énigmes</span>, où les vaisseaux fantômes continuent de naviguer dans les récits captivants des marins <span class="span_article">d'hier et d'aujourd'hui</span>.</p>
                 </div>
-                <div class="main__article__conclusion__content__images">
+                <div class="main__article__conclusion__content__images" data-aos="fade-up" data-aos-duration="1000">
                     <img src="/creatures/creature_15.jpg" alt="creature_15">
                 </div>
             </div>
