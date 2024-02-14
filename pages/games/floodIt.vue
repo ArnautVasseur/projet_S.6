@@ -218,8 +218,7 @@ onMounted(() => {
 
 <template>
   <div class="container" id="game" :class="gameEnded ? 'game-ended' : ''">
-    <h1>Flood-it</h1>
-    <div class="moves">{{ moves }} moves</div>
+    <Comp_Header class="header"/>
     <div class="grid">
       <div v-for="yi in size.y" :key="yi" class="row">
         <div v-for="xi in size.x" :id="'cell-' + xi + '' + yi" :key="xi" class="cell" @click="onCellClick">{{ xi }} / {{ yi }}</div>
@@ -249,6 +248,7 @@ onMounted(() => {
         <Comp_Button class="btn" @click="restartGame">Restart</Comp_Button>
         <Comp_Button class="btn" @click="newGame">New game</Comp_Button>
         <p>Points: {{ Points }}</p>
+        <p>{{ moves }} clicks</p>
       </div>
     </div>
   </div>
@@ -275,6 +275,11 @@ definePageMeta({
     min-width: 100vw;
 }
 
+.header{
+  position: absolute;
+  top: 5vh;
+}
+
 .menu {
   display: flex;
   justify-content: center;
@@ -289,7 +294,6 @@ definePageMeta({
 #game {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 h3 {
@@ -322,7 +326,7 @@ h3 {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  margin-top: 4vw;
+  margin-top: 25vh;
 }
 
 .row {

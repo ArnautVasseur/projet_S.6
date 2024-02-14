@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <Comp_Header/>
     <div class="PointAndClick">
       <Comp_Target v-if="!isGameWon" @click="startGame()" />
       <div v-if="isGameWon">

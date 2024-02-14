@@ -424,7 +424,7 @@ a{
             }
         }
 
-        &__Bermudes, &__Dragon, &__DeadZone, &__MarianaTrench, &__GhostLights, &__MaryCeleste, &__SubMarines, &__Bloop, &__Cryptids{
+        &__Bermudes{
             width: 275px;
             height: 176px;
             border-radius: 20px;
@@ -435,7 +435,6 @@ a{
             align-items: center;
             background: none;
             backdrop-filter: blur(10px);
-            @include PictureShadow;
             transition: 1s ease-in-out;
             font-size: 1.3rem;
             cursor: pointer;
@@ -443,6 +442,73 @@ a{
             &.checked {
                 background: $light_blue-color;
                 box-shadow: none;
+            }
+        }
+
+        &__GhostLights, &__MaryCeleste, &__SubMarines{
+            width: 275px;
+            height: 176px;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            background: none;
+            backdrop-filter: blur(10px);
+            transition: 1s ease-in-out;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: 0px 0px 50px $light_blue-color;
+
+            &.checked {
+                background: $light_blue-color;
+                box-shadow: none;
+                box-shadow: 0px 0px 50px $light_blue-color;
+            }
+        }
+
+        &__Dragon, &__DeadZone, &__MarianaTrench{
+            width: 275px;
+            height: 176px;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            background: none;
+            backdrop-filter: blur(10px);
+            transition: 1s ease-in-out;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: 0px 0px 50px rgba(0, 255, 255, 0.5);
+
+            &.checked {
+                background: $light_blue-color;
+                box-shadow: 0px 0px 50px rgba(0, 255, 255, 0.5);
+            }
+        }
+
+        &__Bloop, &__Cryptids{
+            width: 275px;
+            height: 176px;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            background: none;
+            backdrop-filter: blur(10px);
+            transition: 1s ease-in-out;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: 0px 0px 50px rgba(200, 100, 200, 0.5);
+
+            &.checked {
+                background: $light_blue-color;
+                box-shadow: 0px 0px 50px rgba(200, 100, 200, 0.5);
             }
         }
     }

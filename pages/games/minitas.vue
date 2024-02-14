@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="container">
+    <Comp_Header class="header"/>
     <div class="grid">
       <div v-for="(row, rowIndex) in map" :key="rowIndex" class="row">
         <div
@@ -165,7 +166,9 @@ definePageMeta({
 </script>
 
 <style scoped lang="scss">
-
+.header{
+  position: fixed; 
+}
 .container{
   min-height: 100vh;
   background-image: radial-gradient(50% 50% at -12% 40%, #00FFFF45 3%, #00031700 100%),radial-gradient(34% 46% at 107% 40%, #00FFFF3D 4%, #00031700 100%),radial-gradient(75% 75% at 50% 50%, #0B0D3AFF 0%, #080A1EFF 100%);
