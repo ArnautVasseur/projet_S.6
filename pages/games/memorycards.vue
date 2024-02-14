@@ -11,9 +11,90 @@
         @flip="flipCard"
       />
     </div>
-    <Comp_Button @click="resetGame">Reset Game</Comp_Button>
+    <p>Points: {{ Points }}</p>
   </div>
 </template>
+
+<script setup>
+const store = useGlobalStore()
+let Points = ref();
+
+const getPoints = async () => {
+    const response = await API.get(`/users/${store.token}`)
+    Points.value = response.data.points
+    console.log(Points.value)
+}
+
+const AddPoints = async (userID, morepoints) => {
+    try {
+        const response = await API.put(`/users/${userID}/points/${morepoints}`);
+        console.log("Points added successfully:", response.data);
+    } catch (error) {
+        console.error("Error updating points:", error);
+    }
+};
+
+onMounted(async () => {
+    await store.token,
+    await getPoints()
+})
+
+const cards = ref([
+  { value: '/memorycards_icons/coquiperl.png', flipped: false, matched: false },
+  { value: '/memorycards_icons/raie.png', flipped: false, matched: false },
+  { value: '/memorycards_icons/star.png', flipped: false, matched: false },
+  { value: '/memorycards_icons/meduse.png', flipped: false, matched: false },
+  { value: '/memorycards_icons/dolphin.png', flipped: false, matched: false },
+  { value: '/memorycards_icons/raie.png', flipped: false, matched: false },
+  { value: '/memorycards_icons/meduse.png', flipped: false, matched: false },
+  { value: '/memorycards_icons/star.png', flipped: false, matched: false },
+  { value: '/memorycards_icons/coquiperl.png', flipped: false, matched: false },
+  { value: '/memorycards_icons/seal.png', flipped: false, matched: false },
+  { value: '/memorycards_icons/seal.png', flipped: false, matched: false },
+  { value: '/memorycards_icons/dolphin.png', flipped: false, matched: false }
+]);
+
+const flippedCards = ref([]);
+const isChecking = ref(false);
+
+const flipCard = (index) => {
+  if (!isChecking.value) {
+    cards.value[index].flipped = true;
+    flippedCards.value.push(index);
+
+    if (flippedCards.value.length === 2) {
+      isChecking.value = true;
+      setTimeout(() => {
+        checkMatch();
+      }, 500);
+    }
+  }
+};
+
+const checkMatch = () => {
+  const [index1, index2] = flippedCards.value;
+  if (cards.value[index1].value === cards.value[index2].value) {
+    cards.value[index1].matched = true;
+    cards.value[index2].matched = true;
+  } else {
+    cards.value[index1].flipped = false;
+    cards.value[index2].flipped = false;
+  }
+
+  flippedCards.value = [];
+  isChecking.value = false;
+
+  // Check if all cards are matched, then reset the game
+  if (cards.value.every(card => card.matched)) {
+    alert('Congratulations! You won the game!');
+    let morepoints = Points.value + 3
+    console.log(morepoints)
+    AddPoints(store.token, morepoints); // Assuming AddPoints and store are
+    resetGame();
+  }
+};
+
+</script>
 
 <script>
 export default {
@@ -47,7 +128,7 @@ export default {
           this.isChecking = true;
           setTimeout(() => {
             this.checkMatch();
-          }, 1000);
+          }, 500);
         }
       }
     },
@@ -68,6 +149,9 @@ export default {
       // Check if all cards are matched, then reset the game
       if (this.cards.every(card => card.matched)) {
         alert('Congratulations! You won the game!');
+
+        AddPoints(store.token, morepoints)
+
         this.resetGame();
       }
     },
@@ -96,6 +180,7 @@ export default {
     justify-content: center;
     gap: 50px;
     align-items: center;
+    color: white;
 }
 
 .card-container {

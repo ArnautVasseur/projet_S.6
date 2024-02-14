@@ -35,7 +35,35 @@
   </div>
 </template>
 
+<script setup>
+
+const store = useGlobalStore()
+let Points = ref();
+
+async function getPoints(){
+    const response = await API.get(`/users/${store.token}`)
+    Points.value = response.data.points
+    console.log(Points.value)
+}
+
+async function AddPoints(userID, morepoints){
+    try {
+        const response = await API.put(`/users/${userID}/points/${morepoints}`);
+        console.log("Points added successfully:", response.data);
+    } catch (error) {
+        console.error("Error updating points:", error);
+    }
+};
+
+onMounted(async () => {
+    await store.token,
+    await getPoints()
+})
+
+</script>
+
 <script>
+
 export default {
   data() {
     return {

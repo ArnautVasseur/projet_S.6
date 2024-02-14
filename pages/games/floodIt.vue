@@ -1,5 +1,27 @@
 <script setup lang="ts">
 import { getRandomNumber, storage } from 'shuutils'
+const store = useGlobalStore()
+let Points = ref();
+
+onMounted(async () => {
+    await store.token,
+    await getPoints()
+})
+
+const getPoints = async () => {
+    const response = await API.get(`/users/${store.token}`)
+    Points.value = response.data.points
+    console.log(Points.value)
+}
+
+const AddPoints = async (userID: number | null, morepoints: number | null) => {
+    try {
+        const response = await API.put(`/users/${userID}/points/${morepoints}`);
+        console.log("Points added successfully:", response.data);
+    } catch (error) {
+        console.error("Error updating points:", error);
+    }
+};
 
 storage.prefix = 'flood-it_'
 
@@ -104,6 +126,8 @@ const checkEnd = (): void => {
 const onGameEnded = (): void => {
   console.log('game ended')
   gameEnded.value = true
+  let morepoints = Points.value + 3
+  AddPoints(store.token, morepoints)
 }
 
 const renderGame = (): void => {
@@ -224,6 +248,7 @@ onMounted(() => {
       <div class="menu">
         <Comp_Button class="btn" @click="restartGame">Restart</Comp_Button>
         <Comp_Button class="btn" @click="newGame">New game</Comp_Button>
+        <p>Points: {{ Points }}</p>
       </div>
     </div>
   </div>
@@ -253,7 +278,12 @@ definePageMeta({
 .menu {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
+
+  p{
+    font-size: $desktop-large;
+  }
 }
 
 #game {
@@ -343,7 +373,7 @@ h3 {
 }
 
 .footer {
-  color: wheat;
+  color: white;
   font-size: 10px;  
   padding: 15px;
 }

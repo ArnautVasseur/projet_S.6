@@ -3,18 +3,20 @@
     <div class="PointAndClick">
       <Comp_Target v-if="!isGameWon" @click="startGame()" />
       <div v-if="isGameWon">
-        <p>Vous avez gagné!</p>
+        <p>Vous avez gagné 3 points !</p>
       </div>
     </div>
     <p>Votre score: {{ score }}</p>
+    <p>Points: {{ Points }}</p>
   </div>
   
 </template>
 
 <script setup lang="ts">
-
+const store = useGlobalStore()
 let score = ref(0);
 let isGameWon = ref(false);
+let Points = ref();
 
 function startGame() {
 
@@ -23,10 +25,32 @@ function startGame() {
   if (score.value === 15) {
     console.log("Vous avez gagné");
     isGameWon.value = true;
+    let morepoints = Points.value + 3
+    AddPoints(store.token, morepoints)
   } else {
     console.log(score.value);
   }
 }
+
+onMounted(async () => {
+    await store.token,
+    await getPoints()
+})
+
+const getPoints = async () => {
+    const response = await API.get(`/users/${store.token}`)
+    Points.value = response.data.points
+    console.log(Points.value)
+}
+
+const AddPoints = async (userID: number | null, morepoints: number | null) => {
+    try {
+        const response = await API.put(`/users/${userID}/points/${morepoints}`);
+        console.log("Points added successfully:", response.data);
+    } catch (error) {
+        console.error("Error updating points:", error);
+    }
+};
 </script>
 
 <script lang="ts">

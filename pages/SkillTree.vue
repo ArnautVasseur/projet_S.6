@@ -171,8 +171,6 @@ const getAchievement = async () => {
     });
 };
 
-console.log(store.achievement__8)
-
 onMounted(async () => {
     await store.token
     await getPoints()
