@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { getRandomNumber, storage } from 'shuutils'
-import { ref, onMounted } from 'vue'
 
 storage.prefix = 'flood-it_'
 
@@ -19,16 +18,12 @@ const size = { x: 7, y: 7 }
 const colors = ['royalblue', 'deeppink', 'chartreuse', 'darkorange']
 
 const setGrid = (): void => {
-  // ex : '7x7_3200013120203221020122022130221111223000303132131'
-  // size = '7x7'
-  // content = '3200013120203221020122022130221111223000303132131'
   let [, content] = seed.value.split('_')
   if (!content) return console.error('failed to get seed content')
   for (let yi = 1; yi <= size.y; yi++)
     for (let xi = 1; xi <= size.x; xi++) {
       if (!content[0]) continue
       const index = Number.parseInt(content[0])
-      // content = '200013120203221020122022130221111223000303132131'
       content = content.slice(1)
       colorCell(xi, yi, colors[index] ?? 'red')
     }
@@ -198,7 +193,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="game" :class="gameEnded ? 'game-ended' : ''">
+  <div class="container" id="game" :class="gameEnded ? 'game-ended' : ''">
     <h1>Flood-it</h1>
     <div class="moves">{{ moves }} moves</div>
     <div class="grid">
@@ -227,8 +222,8 @@ onMounted(() => {
     </div>
     <div class="footer">
       <div class="menu">
-        <button class="btn" @click="restartGame">Restart</button>
-        <button class="btn" @click="newGame">New game</button>
+        <Comp_Button class="btn" @click="restartGame">Restart</Comp_Button>
+        <Comp_Button class="btn" @click="newGame">New game</Comp_Button>
       </div>
     </div>
   </div>
@@ -247,7 +242,13 @@ definePageMeta({
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
+.container{
+    background-image: radial-gradient(50% 50% at -12% 40%, #00FFFF45 3%, #00031700 100%),radial-gradient(34% 46% at 107% 40%, #00FFFF3D 4%, #00031700 100%),radial-gradient(75% 75% at 50% 50%, #0B0D3AFF 0%, #080A1EFF 100%);
+    min-height: 100vh;
+    min-width: 100vw;
+}
 
 .menu {
   display: flex;
@@ -269,7 +270,7 @@ h3 {
   background: none;
   border: 1px solid;
   border-radius: 3px;
-  color: blue;
+  color: $light_blue-color;
   cursor: pointer;
   font-size: 20px;
   margin-bottom: 6px;
@@ -281,7 +282,7 @@ h3 {
 
 .btn:hover {
   opacity: 1;
-  background-color: blue;
+  background-color: $light_blue-color;
   color: white;
   transition: ease-in-out 300ms;
 }
@@ -343,8 +344,7 @@ h3 {
 
 .footer {
   color: wheat;
-  font-size: 10px;
-  margin-top: auto;
+  font-size: 10px;  
   padding: 15px;
 }
 

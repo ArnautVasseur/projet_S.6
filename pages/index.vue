@@ -53,10 +53,12 @@
         h1{
             font-size: $desktop-h1;
             font-weight: 500;
-            color: $light_blue-color;
+            color: lighten($light_blue-color, 15%);
             text-align: center;
             animation: fadeIn ease-in-out 1s;
             margin-bottom: 100px;
+            font-family: $cinzel, serif;
+            font-weight: 400;
         }
 
         &__box{

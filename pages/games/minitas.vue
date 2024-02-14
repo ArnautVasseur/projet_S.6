@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <div class="grid">
       <div v-for="(row, rowIndex) in map" :key="rowIndex" class="row">
         <div
@@ -15,23 +15,23 @@
 
     <div class="controls">
       <label for="instructions">Select Instructions:</label>
-      <select v-model="selectedInstruction" id="instructions">
+      <select class="inputs__selector" v-model="selectedInstruction" id="instructions">
         <option value="W">West</option>
         <option value="S">South</option>
         <option value="E">East</option>
         <option value="N">North</option>
       </select>
-      <button @click="addInstruction">Add Instruction</button>
+      <Comp_Button @click="addInstruction">Add Instruction</Comp_Button>
+    </div>
 
-      <div v-if="instructionList.length > 0">
+    <div class="controls__list" v-if="instructionList.length > 0">
         <p>Selected Instructions:</p>
         <ul>
           <li v-for="(instruction, index) in instructionList" :key="index">{{ instruction }}</li>
         </ul>
-        <button @click="executeInstructions">Move Submarine</button>
-        <button @click="clearInstructions">Clear Instructions</button>
-      </div>
-    </div>
+        <Comp_Button @click="executeInstructions">Move Submarine</Comp_Button>
+        <Comp_Button @click="clearInstructions">Clear Instructions</Comp_Button>
+      </div>  
   </div>
 </template>
 
@@ -136,7 +136,17 @@ definePageMeta({
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
+.container{
+  min-height: 100vh;
+  background-image: radial-gradient(50% 50% at -12% 40%, #00FFFF45 3%, #00031700 100%),radial-gradient(34% 46% at 107% 40%, #00FFFF3D 4%, #00031700 100%),radial-gradient(75% 75% at 50% 50%, #0B0D3AFF 0%, #080A1EFF 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  color: white;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(10, 40px);
@@ -165,5 +175,21 @@ definePageMeta({
 
 .controls {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+select {
+  background-color: $light_blue-color;
+  border: none;
+  padding: 20px;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
 }
 </style>
