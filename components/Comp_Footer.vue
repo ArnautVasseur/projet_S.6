@@ -23,6 +23,12 @@
                 </li>
 
                 <li>
+                    <RouterLink to="/articles/deadzone">
+                        Golf du Mexique: 'Dead Zone'
+                    </RouterLink>
+                </li>
+
+                <li>
                     <RouterLink to="/articles/marianatrench">
                         Fosse Mariane
                     </RouterLink>

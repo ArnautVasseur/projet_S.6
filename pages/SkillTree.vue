@@ -438,6 +438,7 @@ a{
             transition: 1s ease-in-out;
             font-size: 1.3rem;
             cursor: pointer;
+            box-shadow: 0px 0px 50px white;
 
             &.checked {
                 background: $light_blue-color;
